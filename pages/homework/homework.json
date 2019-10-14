@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wux-steps": "../../dist/steps/index",
+    "wux-step": "../../dist/step/index",
+    "wux-radio-group": "../../dist/radio-group/index",
+    "wux-radio": "../../dist/radio/index"
+    },
+    "navigationBarTitleText": "课后习题"
+}

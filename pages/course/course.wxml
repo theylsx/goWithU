@@ -1,0 +1,23 @@
+<!--pages/course/course.wxml-->
+<view class="page">
+  <wux-segmented-control class="segement" values="{{ ['课程视频', '课程作业'] }}" bind:change="onChange" />
+  <scroll-view wx:if="{{current == 0}}">
+    <wux-wing-blank size="default" wx:for="{{course}}">
+      <wux-card  actions="{{video}}" title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}" bind:action="clickCard">
+        <view slot="body">{{item}}七年级上</view>
+        <view slot="footer">{{courseMotto[index]}}</view>
+      </wux-card>
+      <wux-white-space size="large" />
+    </wux-wing-blank>
+  </scroll-view>
+
+  <scroll-view wx:if="{{current == 1}}">
+    <wux-wing-blank size="default" wx:for="{{course}}">
+      <wux-card title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}"  actions="{{homework}}" bind:action="toHomework">
+        <view slot="body">{{item}}七年级上课后习题</view>
+        <view slot="footer">{{courseMotto[index]}}</view>
+      </wux-card>
+      <wux-white-space size="large" />
+    </wux-wing-blank>
+  </scroll-view>
+</view>

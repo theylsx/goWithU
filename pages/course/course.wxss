@@ -1,0 +1,5 @@
+/* pages/course/course.wxss */
+
+.segement{
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/video/video",
+    "pages/user/user",
+    "pages/communicate/communicate",
+    "pages/course/course",
+    "pages/homework/homework"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "医路随学",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#515151",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "icon/course51.png",
+        "iconPath": "icon/coursecd.png",
+        "pagePath": "pages/course/course",
+        "text": "课程"
+      },
+      {
+        "selectedIconPath": "icon/communicate51.png",
+        "iconPath": "icon/communicatecd.png",
+        "pagePath": "pages/communicate/communicate",
+        "text": "交流"
+      },
+      {
+        "selectedIconPath": "icon/user51.png",
+        "iconPath": "icon/usercd.png",
+        "pagePath": "pages/user/user",
+        "text": "用户"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

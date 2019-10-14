@@ -1,0 +1,22 @@
+<!--pages/homework/homework.wxml-->
+
+<view class="page">
+<wux-radio-group name="a" value="{{ value1 }}" title="1.长方形的长为a,宽为b,则长方形的面积为 ( )" bind:change="onChange1">
+                <wux-radio color="positive" title="A. a+b" value="1" />
+                <wux-radio color="positive" title="B. ab" value="2" />
+                <wux-radio color="positive" title="C. ab" value="3" />
+                <wux-radio color="positive" title="D. 2(a+b)" value="4" />
+            </wux-radio-group>
+<view class="endBox">
+<wux-steps current="{{ current }}">
+  <wux-step title="第一题"></wux-step>
+  <wux-step title="第二题"></wux-step>
+  <wux-step title="第三题"></wux-step>
+</wux-steps>
+<view class="button-sp-area">
+  <button type="default" bindtap="onClick">下一题</button>
+</view>
+</view>
+
+
+</view>
