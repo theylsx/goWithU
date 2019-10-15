@@ -7,7 +7,8 @@
     "pages/user/user",
     "pages/communicate/communicate",
     "pages/course/course",
-    "pages/homework/homework"
+    "pages/homework/homework",
+    "pages/goods/goods"
   ],
   "window": {
     "backgroundTextStyle": "light",

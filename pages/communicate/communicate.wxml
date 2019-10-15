@@ -1,2 +1,9 @@
 <!--pages/communicate/communicate.wxml-->
-<text>pages/communicate/communicate.wxml</text>
+<view class="page">
+<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
+<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
+<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
+<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
+<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
+ 
+</view>

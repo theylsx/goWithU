@@ -1,4 +1,12 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "用户"
+  "usingComponents": {
+    "wux-button": "../../dist/button/index",
+    "wux-circle": "../../dist/circle/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-white-space": "../../dist/white-space/index",
+    "wux-row": "../../dist/row/index",
+    "wux-col": "../../dist/col/index"
+  },
+  "navigationBarTitleText": "我的",
+  "navigationStyle": "custom"
 }
