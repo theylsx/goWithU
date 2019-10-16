@@ -1,1 +1,15 @@
 /* pages/showPost/showPost.wxss */
+.avatar{
+  overflow: hidden;
+  border-radius: 50%;
+  height: 50rpx;
+  width: 50rpx;
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+
+}

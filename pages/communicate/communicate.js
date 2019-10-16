@@ -72,7 +72,7 @@ Page({
 
   onClick: function(){
     wx.navigateTo({
-      url: '../homework/homework',
+      url: '../showPost/showPost',
     })
   }
 })
