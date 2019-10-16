@@ -1,10 +1,7 @@
 <!--pages/communicate/communicate.wxml-->
 <view class="page">
-<wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="clickToPost"/>
-<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
-<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
-<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
-<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
-<wux-media thumb="{{userInfo.avatarUrl}}" title="帆布袋" label="diy帆布袋"></wux-media>
- 
+  <wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="clickToPost" />
+  <wux-cell-group>
+    <wux-cell  thumb="/icon/chinese.png" bindtap="onClick" title="找👬" label="中三附属医院"   ></wux-cell>
+  </wux-cell-group>
 </view>

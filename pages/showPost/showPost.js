@@ -1,4 +1,4 @@
-// pages/communicate/communicate.js
+// pages/showPost/showPost.js
 Page({
 
   /**
@@ -62,17 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  clickToPost: function(){
-    wx.navigateTo({
-      url: '../post/post',
-    })
-  },
-
-  onClick: function(){
-    wx.navigateTo({
-      url: '../homework/homework',
-    })
   }
 })
