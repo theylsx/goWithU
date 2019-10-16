@@ -8,7 +8,8 @@
     "pages/communicate/communicate",
     "pages/course/course",
     "pages/homework/homework",
-    "pages/goods/goods"
+    "pages/goods/goods",
+    "pages/post/post"
   ],
   "window": {
     "backgroundTextStyle": "light",

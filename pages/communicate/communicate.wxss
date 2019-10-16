@@ -1,1 +1,7 @@
 /* pages/communicate/communicate.wxss */
+
+.icon{
+  position: fixed;
+  bottom: 40rpx;
+  right: 10rpx;
+}

@@ -1,4 +1,4 @@
-// pages/communicate/communicate.js
+// pages/post/post.js
 Page({
 
   /**
@@ -64,9 +64,9 @@ Page({
 
   },
 
-  clickToPost: function(){
-    wx.navigateTo({
-      url: '../post/post',
+  onClick: function(){
+    wx.switchTab({
+      url: '../communicate/communicate',
     })
   }
 })

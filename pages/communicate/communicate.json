@@ -1,4 +1,7 @@
 {
-  "usingComponents": {"wux-media": "../../dist/media/index"},
+  "usingComponents": {
+    "wux-media": "../../dist/media/index",
+    "wux-icon": "../../dist/icon/index"
+  },
   "navigationBarTitleText": "交流"
 }

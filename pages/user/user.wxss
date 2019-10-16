@@ -29,10 +29,11 @@ page{
 }
 
 .box {
-  height: 100%;
   display: flex;
   justify-content: space-around;
+  padding: 20rpx 0;
 }
+
 
 
 .box1 {
@@ -50,11 +51,10 @@ page{
 }
 
 .vitem {
-  height: 100%;
+  padding-top: 150rpx;
   text-align: center;
   display: flex;  
-  flex-direction: row;  
-  justify-items: center;
+  flex-direction: column;  
   align-items: center; 
 
 }
@@ -69,4 +69,12 @@ page{
 
 .text{
   color: #4de07e
+}
+
+.name{
+  padding-top: 20rpx;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  color: #fff;
 }
