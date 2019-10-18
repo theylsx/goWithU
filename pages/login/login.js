@@ -47,16 +47,6 @@ Page({
   },
 
   click: function(){
-    wx.request({
-      url: 'http://47.100.39.201/tuppy/1',
-      method: 'GET',
-      success: function(res){
-        console.log("s" + JSON.stringify(res.data))
-      },
-      fail: function (res){
-        console.log("f" + res)
-      }
-    })
     wx.switchTab({
       url: '/pages/course/course',
     })
