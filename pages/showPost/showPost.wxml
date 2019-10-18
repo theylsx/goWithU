@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!--pages/index/to_news/to_news.wxml-->
 <view class='tab'>
   <view class='lan'>{{tabdata.title}}</view>
@@ -50,3 +51,36 @@
   <input style='display:none' type="" bindinput="bindChange" confirm-type="done" placeholder="" />
   <image bindtap="upimg1" class='jia_img' src='../../../images/jia_img.png'></image>
 </view>
+=======
+<!--pages/showPost/showPost.wxml-->
+<wux-wing-blank size="large">
+  <view>
+    <text class="title">寻找朋友</text>
+  </view>
+   <wux-white-space size="default" />
+  <view class="row">
+    <view class="avatar">
+      <open-data type="userAvatarUrl" ></open-data>
+    </view>
+    <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+    <view class="col">
+        <open-data type="userNickName" lang="zh_CN" class="text"></open-data>
+        <view class="row">
+            <text class="time">10-16</text>
+            <text decode="{{true}}">&nbsp;</text>
+            <text class="readCount">阅读28000</text>
+        </view>
+        
+    </view>
+    
+
+
+  </view>
+  
+  <wux-divider show-text="{{false}}" />
+  <view>
+    <text>中三附属医院我想找朋友一起玩</text>
+  </view>
+
+</wux-wing-blank>
+>>>>>>> 4293ff48408a8ad491c7863e966655f5726353ea
