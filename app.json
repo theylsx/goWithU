@@ -11,7 +11,7 @@
     "pages/goods/goods",
     "pages/post/post",
     "pages/showPost/showPost",
-    "pages/upload/upload"
+    "pages/upload/upload",
     "pages/talk/talk"
   ],
   "window": {
