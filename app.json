@@ -10,7 +10,8 @@
     "pages/homework/homework",
     "pages/goods/goods",
     "pages/post/post",
-    "pages/showPost/showPost"
+    "pages/showPost/showPost",
+    "pages/talk/talk"
   ],
   "window": {
     "backgroundTextStyle": "light",
