@@ -1,10 +1,16 @@
-// pages/user/user.js
+// pages/recruit/recruit.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    button: [{
+      type: 'primary',
+      text: '报名',
+    }]
+
+
 
   },
 
@@ -62,29 +68,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  recruit: function(){
-    wx.navigateTo({
-      url: '../recruit/recruit',
-    })
-  },
-
-  learn: function(){
-    wx.navigateTo({
-      url: '../goods/goods',
-    })
-  },
-
-  product: function(){
-    wx.navigateTo({
-      url: '../upload/upload',})
-      },
-
-  talk: function(){
-    wx.navigateTo({
-      url: '../talk/talk',
-    })
   }
-
 })

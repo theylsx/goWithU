@@ -1,4 +1,4 @@
-// pages/user/user.js
+// pages/recruitDetail/recruitDetail.js
 Page({
 
   /**
@@ -62,29 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  recruit: function(){
-    wx.navigateTo({
-      url: '../recruit/recruit',
-    })
-  },
-
-  learn: function(){
-    wx.navigateTo({
-      url: '../goods/goods',
-    })
-  },
-
-  product: function(){
-    wx.navigateTo({
-      url: '../upload/upload',})
-      },
-
-  talk: function(){
-    wx.navigateTo({
-      url: '../talk/talk',
-    })
   }
-
 })

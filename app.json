@@ -12,7 +12,9 @@
     "pages/post/post",
     "pages/showPost/showPost",
     "pages/upload/upload",
-    "pages/talk/talk"
+    "pages/talk/talk",
+    "pages/recruit/recruit",
+    "pages/recruitDetail/recruitDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
