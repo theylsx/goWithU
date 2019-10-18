@@ -68,5 +68,11 @@ Page({
     wx.navigateTo({
       url: '../goods/goods',
     })
+  },
+
+  talk: function(){
+    wx.navigateTo({
+      url: '../talk/talk',
+    })
   }
 })
