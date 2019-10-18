@@ -19,9 +19,11 @@
     <wux-cell-group >
       <wux-cell thumb="/icon/chinese.png" title="学生认证" bindtap="learn"></wux-cell>
       <wux-cell thumb="/icon/math.png" title="学习进度" bindtap="verify"></wux-cell>
-      <wux-cell thumb="/icon/english.png" title="文创作品" bindtap="verify"></wux-cell>
+      <wux-cell thumb="/icon/english.png" title="文创作品" bindtap="learn"></wux-cell>
       <wux-cell thumb="/icon/physics.png" title="信息反馈" bindtap="verify"></wux-cell>
       <wux-cell thumb="/icon/chemical.png" title="关于我们" bindtap="verify"></wux-cell>
+      <wux-cell thumb="/icon/qingsushudong.png" title="树洞" bindtap="talk"></wux-cell>
+      <wux-cell thumb="/icon/zhiyuanzhe.png" title="志愿者招募" bindtap="recruit"></wux-cell>
     </wux-cell-group>
 
   </wux-wing-blank>

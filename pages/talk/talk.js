@@ -14,12 +14,12 @@ function initData(that) {
   msgList = [{
     speaker: 'server',
     contentType: 'text',
-    content: '欢迎来到英雄联盟，敌军还有30秒到达战场，请做好准备！'
+    content: '有什么问题都可以咨询我们哦！'
   },
   {
     speaker: 'customer',
     contentType: 'text',
-    content: '我怕是走错片场了...'
+    content: '你好...我很不开心。'
   }
   ]
   that.setData({
@@ -44,7 +44,8 @@ Page({
    */
   data: {
     scrollHeight: '100vh',
-    inputBottom: 0
+    inputBottom: 0,
+    inputValue: ""
   },
 
   /**
@@ -121,10 +122,27 @@ Page({
       msgList,
       inputVal
     });
-
-
   },
 
+  getInput: function(e){
+    console.log(e);
+    this.setData({
+      inputValue: e.detail.value, 
+    })
+  },
+
+  sendButton: function(){
+    msgList.push({
+      speaker: 'customer',
+      contentType: 'text',
+      content: this.data.inputValue
+    })
+    inputVal = '';
+    this.setData({
+      msgList,
+      inputVal
+    });
+  },
   /**
    * 退回上一页
    */
