@@ -68,5 +68,12 @@ Page({
     wx.navigateTo({
       url: '../goods/goods',
     })
+  },
+
+  product: function(){
+    wx.navigateTo({
+      url: '../upload/upload',
+    })
   }
+
 })
