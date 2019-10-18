@@ -70,9 +70,13 @@ Page({
     })
   },
 
+  product: function(){
+    wx.navigateTo({
+      url: '../upload/upload',
   talk: function(){
     wx.navigateTo({
       url: '../talk/talk',
     })
   }
+
 })
