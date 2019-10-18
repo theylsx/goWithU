@@ -9,3 +9,11 @@
 .cell{
   height: 250rpx;
 }
+
+.slide-image{
+  width: 100%;
+}
+
+.swipe{
+  height: 25%;
+}
