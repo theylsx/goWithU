@@ -1,57 +1,28 @@
 <!--pages/user/user.wxml-->
 <view class="page">
-    <view class="top">
-      <view class="box">
-        <view class="vitem">
-          <view class="avatar">
-            <open-data type="userAvatarUrl"></open-data>
-          </view>
-          <view class="name">
-            <text>你好，</text>
-            <open-data type="userNickName" lang="zh_CN"></open-data>
-          </view>
+  <view class="top">
+    <view class="box">
+      <view class="vitem">
+        <view class="avatar">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <view class="name">
+          <text>你好</text>
+          <open-data type="userNickName" lang="zh_CN"></open-data>
         </view>
       </view>
-      </view>
-  <wux-white-space body-style="height: 30px" />
-  <wux-wing-blank size="large">
-    <text style="color:#cdcdcd">学习情况</text>
-    <wux-white-space size="small" />
-    <view class="box1">
-      <wux-row>
-        <wux-col span="6">
-          <view class="display">
-            <wux-circle percent="80" color="#4de07e">
-              <text class="text">80%</text>
-            </wux-circle>
-            <text style="color:#515151">视频学习</text>
-          </view>
-
-        </wux-col>
-        <wux-col span="6">
-          <view class="display">
-            <wux-circle percent="60" color="#4de07e">
-              <text class="text">60%</text>
-            </wux-circle>
-            <text style="color:#515151">课后习题</text>
-          </view>
-
-        </wux-col>
-      </wux-row>
-
-
     </view>
+  </view>
+
+  <wux-white-space body-style="height: 20px" />
+  <wux-wing-blank size="small">
+    <wux-cell-group >
+      <wux-cell thumb="/icon/chinese.png" title="学生认证" bindtap="learn"></wux-cell>
+      <wux-cell thumb="/icon/math.png" title="学习进度" bindtap="verify"></wux-cell>
+      <wux-cell thumb="/icon/english.png" title="文创作品" bindtap="verify"></wux-cell>
+      <wux-cell thumb="/icon/physics.png" title="信息反馈" bindtap="verify"></wux-cell>
+      <wux-cell thumb="/icon/chemical.png" title="关于我们" bindtap="verify"></wux-cell>
+    </wux-cell-group>
+
   </wux-wing-blank>
-  <wux-white-space body-style="height: 30px" />
-  <wux-wing-blank size="large">
-    <text style="color:#cdcdcd">文创产品</text>
-    <wux-white-space size="small" />
-    <view class="box2" bindtap="onClick">
-
-
-
-    </view>
-  </wux-wing-blank>
-
-
 </view>

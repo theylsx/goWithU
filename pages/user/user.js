@@ -64,7 +64,7 @@ Page({
 
   },
 
-  onClick: function(){
+  learn: function(){
     wx.navigateTo({
       url: '../goods/goods',
     })
