@@ -6,6 +6,11 @@
     <wux-cell-group>
       <wux-cell thumb="/icon/chinese.png" bindtap="onClick" title="找👬" label="中三附属医院"></wux-cell>
     </wux-cell-group>
+
+    <wux-cell-group>
+      <wux-cell thumb="/icon/chinese.png" bindtap="onClick" title="寻找一起聊天学习的小伙伴" label="天河儿童医院"></wux-cell>
+    </wux-cell-group>
+
   </scroll-view>
 
   <scroll-view wx:if="{{current == 1}}">

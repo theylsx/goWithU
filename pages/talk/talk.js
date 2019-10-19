@@ -19,7 +19,7 @@ function initData(that) {
   {
     speaker: 'customer',
     contentType: 'text',
-    content: '你好...我很不开心。'
+    content: '你好...我想和你聊一聊天。'
   }
   ]
   that.setData({

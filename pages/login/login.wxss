@@ -46,6 +46,3 @@ page{
   font-size: 15px;
 }
 
-.tourist{
-  background: red;
-}

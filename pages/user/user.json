@@ -3,7 +3,8 @@
     "wux-wing-blank": "../../dist/wing-blank/index",
     "wux-white-space": "../../dist/white-space/index",
     "wux-cell-group": "../../dist/cell-group/index",
-    "wux-cell": "../../dist/cell/index"
+    "wux-cell": "../../dist/cell/index",
+    "wux-tag": "../../dist/tag/index"
   },
   "navigationBarTitleText": "我的",
   "navigationStyle": "custom"

@@ -46,7 +46,9 @@ Page({
     })
   },
 
-  click: function(){
+  click: function(res){
+    app.globalData.identity = res.currentTarget.dataset.identity
+    console.log(app.globalData.identity)
     wx.switchTab({
       url: '/pages/course/course',
     })

@@ -12,6 +12,9 @@
         <view>
           <text class="text2">选择身份标签，我们才能精确的推送活动消息</text>
         </view>
+        <view>
+          <text class="text2">和服务内容</text>
+        </view>
 
       </view>
     </view>
@@ -19,15 +22,15 @@
 
   <wux-wing-blank size="large">
     <wux-cell-group>
-      <wux-cell title="小可爱们" is-link label="为你精确推送所需内容和活动消息" bind:click="click"></wux-cell>
+      <wux-cell title="小可爱" is-link label="为您精确推送所需内容和活动消息" data-identity="小可爱" bind:click="click"></wux-cell>
     </wux-cell-group>
     <wux-white-space body-style="height: 40px" />
     <wux-cell-group>
-      <wux-cell title="志愿者" is-link label="为你精确推送超级有意义的志愿活动" bind:click="click"></wux-cell>
+      <wux-cell title="志愿者" is-link label="为您推送超级有意义的志愿活动"  data-identity="志愿者"  bind:click="click"></wux-cell>
     </wux-cell-group>
     <wux-white-space body-style="height: 40px" />
     <wux-cell-group class="tourist">
-      <wux-cell title="游客" is-link label="仅支持简单浏览内容" bind:click="click"></wux-cell>
+      <wux-cell title="游客" is-link label="仅支持简单浏览内容" data-identity="游客"  bind:click="click"></wux-cell>
     </wux-cell-group>
 
   </wux-wing-blank>
