@@ -1,12 +1,39 @@
+<view class="page">
+  <view class="top">
+    <view class="box">
+      <view class="vitem">
 
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+        <view>
+          <text class="text1">请选择身份标签</text>
+        </view>
+
+        <wux-white-space body-style="height: 20px" />
+
+        <view>
+          <text class="text2">选择身份标签，我们才能精确的推送活动消息</text>
+        </view>
+        <view>
+          <text class="text2">和服务内容</text>
+        </view>
+
+      </view>
+    </view>
   </view>
 
-  <button  type="primary" bindtap="click" class="btn">登陆</button>
+  <wux-wing-blank size="large">
+    <wux-cell-group>
+      <wux-cell title="小可爱" is-link label="为您精确推送所需内容和活动消息" data-identity="小可爱" bind:click="click"></wux-cell>
+    </wux-cell-group>
+    <wux-white-space body-style="height: 40px" />
+    <wux-cell-group>
+      <wux-cell title="志愿者" is-link label="为您推送超级有意义的志愿活动"  data-identity="志愿者"  bind:click="click"></wux-cell>
+    </wux-cell-group>
+    <wux-white-space body-style="height: 40px" />
+    <wux-cell-group class="tourist">
+      <wux-cell title="游客" is-link label="仅支持简单浏览内容" data-identity="游客"  bind:click="click"></wux-cell>
+    </wux-cell-group>
+
+  </wux-wing-blank>
+
+
 </view>

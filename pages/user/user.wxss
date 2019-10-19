@@ -1,5 +1,11 @@
 /* pages/user/user.wxss */
 
+.label{
+ position: absolute;
+  z-index: 2;
+margin-top: 128rpx;
+margin-left: 39rpx;
+}
 
 
 .picture{
@@ -20,12 +26,15 @@ page{
 }
 
 .avatar{
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   border-radius: 50%;
   height: 170rpx;
   width: 170rpx;
   border: 2px solid #fff;  
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .box {
@@ -67,9 +76,6 @@ page{
   align-items: center;
 }
 
-.text{
-  color: #4de07e
-}
 
 .name{
   padding-top: 20rpx;

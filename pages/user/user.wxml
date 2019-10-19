@@ -4,7 +4,9 @@
     <view class="box">
       <view class="vitem">
         <view class="avatar">
+        <wux-tag color="#87d068" class="label">{{identity}}</wux-tag>
           <open-data type="userAvatarUrl"></open-data>
+          
         </view>
         <view class="name">
           <text>你好</text>
@@ -16,14 +18,14 @@
 
   <wux-white-space body-style="height: 20px" />
   <wux-wing-blank size="small">
-    <wux-cell-group >
+    <wux-cell-group>
       <wux-cell thumb="/icon/chinese.png" title="学生认证" bindtap="learn"></wux-cell>
       <wux-cell thumb="/icon/math.png" title="学习进度" bindtap="verify"></wux-cell>
       <wux-cell thumb="/icon/english.png" title="文创作品" bindtap="product"></wux-cell>
       <wux-cell thumb="/icon/physics.png" title="信息反馈" bindtap="verify"></wux-cell>
-      <wux-cell thumb="/icon/chemical.png" title="关于我们" bindtap="verify"></wux-cell>
       <wux-cell thumb="/icon/qingsushudong.png" title="树洞" bindtap="talk"></wux-cell>
       <wux-cell thumb="/icon/zhiyuanzhe.png" title="志愿者招募" bindtap="recruit"></wux-cell>
+      <wux-cell thumb="/icon/chemical.png" title="关于我们" bindtap="verify"></wux-cell>
     </wux-cell-group>
 
   </wux-wing-blank>
