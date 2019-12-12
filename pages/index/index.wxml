@@ -1,0 +1,2 @@
+<image src="../../icon/logo.png"></image>
+<button open-type="getUserInfo" bindgetuserinfo ="click" type="primary"> 进入 </button>

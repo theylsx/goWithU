@@ -2,12 +2,15 @@
 //获取应用实例
 const app = getApp()
 
+
+
 Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+  
 
   onLoad: function () {
     if (app.globalData.userInfo) {
@@ -37,20 +40,41 @@ Page({
       })
     }
   },
-  getUserInfo: function (e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
 
+  
   click: function(res){
     app.globalData.identity = res.currentTarget.dataset.identity
     console.log(app.globalData.identity)
-    wx.switchTab({
-      url: '/pages/course/course',
-    })
+    console.log(app.globalData.userInfo.openid)
+    if (app.globalData.identity == "志愿者"){
+      wx.request({
+        url: 'https://www.tuppy.pub/newTeacher',
+        method: 'POST',
+        data: {
+          "openId": app.globalData.openid
+        },
+        success: res => {
+          console.log(res)
+        },
+      })
+      wx.switchTab({
+        url: '/pages/course/course',
+      })
+    }
+    if (app.globalData.identity == "小可爱") {
+      wx.request({
+        url: 'https://www.tuppy.pub/newStudent',
+        method: 'POST',
+        data: {
+          "openId": app.globalData.openid
+        },
+        success: res => {
+          console.log(res)
+        },
+      })
+      wx.switchTab({
+        url: '/pages/course/course',
+      })
+    }
   }
 })
