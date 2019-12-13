@@ -15,7 +15,8 @@
     "pages/talk/talk",
     "pages/recruit/recruit",
     "pages/recruitDetail/recruitDetail",
-    "pages/myTeacher/myTeacher"
+    "pages/myTeacher/myTeacher",
+    "pages/teacherInformation/teacherInformation"
   ],
   "window": {
     "backgroundTextStyle": "light",

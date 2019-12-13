@@ -1,0 +1,7 @@
+<!--pages/teacherInformation/teacherInformation.wxml-->
+<wux-row>  
+            <wux-col span="4">
+                <wux-image wux-class="image" shape="circle" src="http://47.100.39.201:80/test/image/yuner.jpg" loading="Loading" />
+            </wux-col>
+                  
+        </wux-row>

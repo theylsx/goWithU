@@ -1,4 +1,4 @@
-// pages/myTeacher/myTeacher.js
+// pages/teacherInformation/teacherInformation.js
 Page({
 
   /**
@@ -6,13 +6,6 @@ Page({
    */
   data: {
 
-  },
-
-  tap: function () {
-    wx: wx.navigateTo({
-      url: '../teacherInformation/teacherInformation'
-
-    })
   },
 
   /**

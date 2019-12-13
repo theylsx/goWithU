@@ -1,4 +1,4 @@
 {
-  "usingComponents": {},
+  "usingComponents": {"wux-media": "../../dist/media/index"},
     "navigationBarTitleText": "我的老师"
 }
