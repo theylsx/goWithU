@@ -1,0 +1,11 @@
+/* pages/teacherInformation/teacherInformation.wxss */
+
+.image{
+  display:flex;                    
+ justify-content: center;  
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+}

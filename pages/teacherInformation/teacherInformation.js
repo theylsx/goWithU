@@ -1,22 +1,18 @@
-// pages/user/user.js
-const app = getApp()
-
+// pages/teacherInformation/teacherInformation.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    identity: ""
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      identity: app.globalData.identity
-    })
+
   },
 
   /**
@@ -66,35 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  recruit: function(){
-    wx.navigateTo({
-      url: '../recruit/recruit',
-    })
-  },
-
-  learn: function(){
-    wx.navigateTo({
-      url: '../goods/goods',
-    })
-  },
-
-  product: function(){
-    wx.navigateTo({
-      url: '../upload/upload',})
-      },
-
-myTeacher: function(){
-  wx.navigateTo({
-    url: '../myTeacher/myTeacher',
-  })
-},
-
-  talk: function(){
-    wx.navigateTo({
-      url: '../talk/talk',
-    })
   }
-
 })

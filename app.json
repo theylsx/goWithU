@@ -15,6 +15,8 @@
     "pages/talk/talk",
     "pages/recruit/recruit",
     "pages/recruitDetail/recruitDetail",
+    "pages/myTeacher/myTeacher",
+    "pages/teacherInformation/teacherInformation"
     "pages/courseResources/courseResources"
   ],
   "window": {

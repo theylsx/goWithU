@@ -1,0 +1,30 @@
+<!--pages/teacherInformation/teacherInformation.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <view class="image">
+      <wux-avatar size="large" src="http://47.100.39.201:80/test/image/yuner.jpg" scale="true" />
+    </view>
+    <text class="text">林茂森</text>
+  </view>
+</view>
+<wux-white-space body-style="height: 20px" />
+<view class="page">
+  <view class="page__bd">
+    <wux-divider position="left" text="教师信息" />
+  </view>
+</view>
+
+
+<view class="page">
+
+  <wux-cell thumb="../../icon/email.png" title="邮箱" extra="1150050235@qq.com"></wux-cell>
+  <wux-cell thumb="../../icon/workArea.png" title="工作单位" extra="华南师范大学"></wux-cell>
+
+
+</view>
+
+<wux-cell-group>
+  <wux-cell hover-class="none">
+    <wux-textarea thumb="../../icon/introduction.png" disabled label="自我介绍" rows="3" defaultValue="我很喜欢和小孩子一起玩耍，一起开开心心长大哦！" />
+  </wux-cell>
+</wux-cell-group>

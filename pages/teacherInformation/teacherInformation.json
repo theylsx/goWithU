@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "wux-avatar": "../../dist/avatar/index",
+    "wux-divider": "../../dist/divider/index",
+    "wux-white-space": "../../dist/white-space/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-textarea": "../../dist/textarea/index"
+    }
+}
