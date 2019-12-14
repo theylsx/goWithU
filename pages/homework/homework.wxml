@@ -1,12 +1,33 @@
 <!--pages/homework/homework.wxml-->
 
 <view class="page">
-<wux-radio-group name="a" value="{{ value1 }}" title="1.长方形的长为a,宽为b,则长方形的面积为 ( )" bind:change="onChange1">
+<view wx:if="{{show == 0}}">
+<wux-radio-group name="a"  title="1.长方形的长为a,宽为b,则长方形的面积为 ( )" bind:change="onChange1">
                 <wux-radio color="positive" title="A. a+b" value="1" />
                 <wux-radio color="positive" title="B. ab" value="2" />
                 <wux-radio color="positive" title="C. ab" value="3" />
                 <wux-radio color="positive" title="D. 2(a+b)" value="4" />
             </wux-radio-group>
+
+</view>
+<view wx:if="{{show == 1}}">
+<wux-radio-group name="b"  title="2.下列说法不正确的是   ( )" bind:change="onChange1">
+                <wux-radio color="positive" title="A. 0小于所有正数 " value="1" />
+                <wux-radio color="positive" title="B. 0大于所有负数" value="2" />
+                <wux-radio color="positive" title="C. 0既不是正数也不是负数" value="3" />
+                <wux-radio color="positive" title="D. 0没有绝对值" value="4" />
+            </wux-radio-group>
+
+</view>
+<view wx:if="{{show == 2}}">
+<wux-radio-group name="c"  title="1.在数轴上距2.5有3.5个单位长度的点所表示的数是 ( )" bind:change="onChange1">
+                <wux-radio color="positive" title="A. 6" value="1" />
+                <wux-radio color="positive" title="B. -6" value="2" />
+                <wux-radio color="positive" title="C. -1" value="3" />
+                <wux-radio color="positive" title="D. -1或6" value="4" />
+            </wux-radio-group>
+
+</view>
 <view class="endBox">
 <wux-steps current="{{ current }}">
   <wux-step title="第一题"></wux-step>

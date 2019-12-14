@@ -14,7 +14,8 @@
     "pages/upload/upload",
     "pages/talk/talk",
     "pages/recruit/recruit",
-    "pages/recruitDetail/recruitDetail"
+    "pages/recruitDetail/recruitDetail",
+    "pages/courseResources/courseResources"
   ],
   "window": {
     "backgroundTextStyle": "light",

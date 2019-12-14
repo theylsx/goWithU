@@ -4,7 +4,7 @@
   <scroll-view wx:if="{{current == 0}}">
     <wux-wing-blank size="default" wx:for="{{course}}">
       <wux-card  actions="{{video}}" title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}" bind:action="clickCard">
-        <view slot="body">{{item}}七年级上</view>
+        <view slot="body">{{courseBody[index]}}</view>
         <view slot="footer">{{courseMotto[index]}}</view>
       </wux-card>
       <wux-white-space size="large" />
@@ -12,9 +12,18 @@
   </scroll-view>
 
   <scroll-view wx:if="{{current == 1}}">
-    <wux-wing-blank size="default" wx:for="{{course}}">
+   <wux-wing-blank size="large">
+   <view>完成进度</view>
+   <wux-progress status="progress" show-info strokeWidth="13" percent="50" shape="round"/>
+   <wux-white-space size="large" />
+   <view>学习得分</view>
+   <wux-progress status="progress" show-info percent="70" strokeWidth="13" shape="round"/>
+   <wux-white-space size="large" />
+   
+    </wux-wing-blank>
+    <wux-wing-blank size="default" wx:for="{{work}}">
       <wux-card title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}"  actions="{{homework}}" bind:action="toHomework">
-        <view slot="body">{{item}}七年级上课后习题</view>
+        <view slot="body">{{item}}作业与课件</view>
         <view slot="footer">{{courseMotto[index]}}</view>
       </wux-card>
       <wux-white-space size="large" />
