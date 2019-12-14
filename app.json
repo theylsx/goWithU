@@ -18,6 +18,9 @@
     "pages/myTeacher/myTeacher",
     "pages/teacherInformation/teacherInformation",
     "pages/courseResources/courseResources",
+    "pages/myStudent/myStudent",
+    "pages/studentInformation/studentInformation",
+    "pages/addStudent/addStudent"
     "pages/teacherSignup/teacherSignup",
     "pages/studentSignup/studentSignup"
   ],

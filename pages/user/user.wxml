@@ -15,8 +15,16 @@
   <wux-white-space body-style="height: 20px" />
   <wux-wing-blank size="small">
     <wux-cell-group>
-      <wux-cell thumb="/icon/chinese.png" title="学生认证" bindtap="learn"></wux-cell>
-      <wux-cell thumb="/icon/chinese.png" title="我的老师" bindtap="myTeacher"></wux-cell>
+ 
+      <wux-cell thumb="/icon/chinese.png" title="学生认证" bindtap="learn"></wux-cell>  
+
+  <block wx:if="{{identity=='小可爱'}}">
+    <wux-cell thumb="/icon/chinese.png" title="我的老师" bindtap="myTeacher"></wux-cell>
+    </block>
+<block wx:else>
+    <wux-cell thumb="/icon/chinese.png" title="我的学生" bindtap="myStudent"></wux-cell>
+</block>
+
       <wux-cell thumb="/icon/math.png" title="学习进度" bindtap="verify"></wux-cell>
       <wux-cell thumb="/icon/english.png" title="文创作品" bindtap="product"></wux-cell>
       <wux-cell thumb="/icon/physics.png" title="信息反馈" bindtap="verify"></wux-cell>

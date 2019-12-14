@@ -39,7 +39,7 @@
 }
 
 .wux-media__thumb {
-  border-radius: 50%;
+
   width: 70rpx;
   height: 70rpx;
   display: inline-block;

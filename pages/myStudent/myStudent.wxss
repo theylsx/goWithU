@@ -1,0 +1,6 @@
+/* pages/myStudent/myStudent.wxss */
+.icon{
+  position: fixed;
+  bottom: 40rpx;
+  right: 10rpx;
+}

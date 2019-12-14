@@ -1,0 +1,10 @@
+/* pages/studentInformation/studentInformation.wxss */
+.image{
+  display:flex;                    
+ justify-content: center;  
+}
+
+.text{
+  display: flex;
+  justify-content: center;
+}
