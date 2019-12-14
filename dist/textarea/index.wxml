@@ -1,4 +1,13 @@
 <view class="wux-class {{ classes.wrap }}">
+<view class="{{ classes.hd }}">
+        <block wx:if="{{ thumb }}">
+            <image class="{{ classes.thumb }}" src="{{ thumb }}" />
+        </block>
+        <block wx:else>
+            <slot name="header"></slot>
+        </block>
+    </view>
+
 	<view class="{{ classes.label }}" wx:if="{{ label }}">{{ label }}</view>
 	<block wx:else>
 		<slot></slot>
