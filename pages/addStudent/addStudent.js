@@ -1,22 +1,37 @@
-// pages/user/user.js
-const app = getApp()
-
+// pages/addStudent/addStudent.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    identity: ""
+
   },
+
+showToast: function(){
+wx.showToast({
+    title: '添加成功',
+    icon: '',
+    image: '',
+    duration: 1500,
+    mask: true,
+    success: function(res) {},
+    fail: function(res) {},
+    complete: function(res) {},
+  })
+  setTimeout(function(){
+    wx.navigateTo({
+  url: '../myStudent/myStudent'
+})
+  },1500);
+
+},
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      identity: app.globalData.identity
-    })
+
   },
 
   /**
@@ -66,41 +81,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  recruit: function(){
-    wx.navigateTo({
-      url: '../recruit/recruit',
-    })
-  },
-
-  learn: function(){
-    wx.navigateTo({
-      url: '../goods/goods',
-    })
-  },
-
-  product: function(){
-    wx.navigateTo({
-      url: '../upload/upload',})
-      },
-
-myTeacher: function(){
-  wx.navigateTo({
-    url: '../myTeacher/myTeacher',
-  })
-},
-
-  myStudent: function () {
-    wx.navigateTo({
-      url: '../myStudent/myStudent',
-    })
-  },
-
-  talk: function(){
-    wx.navigateTo({
-      url: '../talk/talk',
-    })
   }
-
 })

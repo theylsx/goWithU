@@ -1,0 +1,28 @@
+<!--pages/studentInformation/studentInformation.wxml-->
+<view class="page">
+  <view class="page__bd page__bd_spacing">
+    <view class="image">
+      <wux-avatar size="large" src="http://47.100.39.201:80/test/image/yuner.jpg" scale="true" />
+    </view>
+    <text class="text">王华</text>
+  </view>
+</view>
+<wux-white-space body-style="height: 20px" />
+<view class="page">
+  <view class="page__bd">
+    <wux-divider position="left" text="学生信息" />
+  </view>
+</view>
+
+
+<view class="page">
+
+  <wux-cell thumb="../../icon/hospital.png" title="医院" extra="中山"></wux-cell>
+
+</view>
+
+<wux-cell-group>
+  <wux-cell hover-class="none">
+    <wux-textarea thumb="../../icon/introduction.png" disabled label="自我介绍" rows="3" defaultValue="我喜欢学习丰富的知识，每天都要开心哦" />
+  </wux-cell>
+</wux-cell-group>

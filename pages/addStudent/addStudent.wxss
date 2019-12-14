@@ -1,0 +1,4 @@
+/* pages/addStudent/addStudent.wxss */
+.button{
+  padding-top: 100dp;
+}
