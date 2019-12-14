@@ -41,6 +41,31 @@ Page({
   click: function() {
     var judge = false
     console.log(app.globalData.openid)
+    // wx.downloadFile({
+
+    //   url: 'https://www.tuppy.pub:443/test/file/course6.pptx',
+
+    //   success: function (res) {
+
+    //     var filePath = res.tempFilePath
+
+    //     wx.openDocument({
+
+    //       filePath: filePath,
+         
+
+    //       success: function (res) {
+    //         console.log(filePath)
+
+    //         console.log('打开文档成功')
+
+    //       }
+
+    //     })
+
+    //   }
+
+    // })
     wx.request({
       url: 'https://www.tuppy.pub/goWithU',
       method: 'POST',

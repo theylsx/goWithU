@@ -6,6 +6,7 @@ Page({
    */
   data: {
     current: 0,
+    show: 0
 
   },
 
@@ -65,10 +66,12 @@ Page({
 
   },
   onClick() {
+    const show = this.data.show + 1 > 2 ? 0 : this.data.show + 1
     const current = this.data.current + 1 > 2 ? 0 : this.data.current + 1
 
     this.setData({
       current,
+      show
     })
   },
   onChange(field, e) {
@@ -80,5 +83,6 @@ Page({
   },
   onChange1(e) {
     this.onChange('value1', e)
+    console.log(e)
   }
 })

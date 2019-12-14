@@ -5,10 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    course:["语文", "数学", "英语", "物理", "化学"],
-    courseIcon:["../../icon/chinese.png", "../../icon/math.png", "../../icon/english.png", "../../icon/physics.png", "../../icon/chemical.png"],
-    courseMotto: ["无丝竹之乱耳，无案牍之劳形", "a²+b²=c²", "Nothing is impossible", "E=mc²", "H₂CO₃⇌CO₂↑+H₂O"],
+    course:["微课程", "科普视频", "微课程", "微课程", "微课程"],
+    courseBody: ["掌握图形的面积", "探索大自然的美妙", "微课程", "微课程", "微课程"],
+    courseIcon:["../../icon/math.png", "../../icon/physics.png", "../../icon/english.png", "../../icon/physics.png", "../../icon/chemical.png"],
+    courseMotto: ["s = a x b", "a²+b²=c²", "Nothing is impossible", "E=mc²", "H₂CO₃⇌CO₂↑+H₂O"],
     current: 0,
+    work:["第一次课程", "第二次课程", "第三次课程"],
     video: [{
       type: 'primary',
       text: '查看视频',
@@ -92,7 +94,7 @@ Page({
 
   toHomework: function(e){
     wx.navigateTo({
-      url: '../homework/homework',
+      url: '../courseResources/courseResources',
     })
   }
 })

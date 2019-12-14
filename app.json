@@ -17,6 +17,7 @@
     "pages/recruitDetail/recruitDetail",
     "pages/myTeacher/myTeacher",
     "pages/teacherInformation/teacherInformation"
+    "pages/courseResources/courseResources"
   ],
   "window": {
     "backgroundTextStyle": "light",
