@@ -21,6 +21,8 @@
     "pages/myStudent/myStudent",
     "pages/studentInformation/studentInformation",
     "pages/addStudent/addStudent"
+    "pages/teacherSignup/teacherSignup",
+    "pages/studentSignup/studentSignup"
   ],
   "window": {
     "backgroundTextStyle": "light",

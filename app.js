@@ -1,11 +1,11 @@
 //app.js
 App({
   globalData: {
-    userInfo: null,
-    identity: null,
+    userInfo: "",
+    identity: "",
     appid: 'wx882769e007a9573e',
     secret: '55867e74554df906a8f7d81036c91fa4',
-    openid: null
+    openid: ""
   },
   onLaunch: function() {
     // 展示本地存储能力
