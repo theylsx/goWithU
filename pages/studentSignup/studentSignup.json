@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-white-space": "../../dist/white-space/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-input": "../../dist/input/index",
+    "wux-field": "../../dist/field/index",
+    "wux-icon": "../../dist/icon/index",
+    "wux-button": "../../dist/button/index"
+  },
+  "navigationBarBackgroundColor": "#84fab0",
+  "navigationBarTitleText": "小可爱"
+}

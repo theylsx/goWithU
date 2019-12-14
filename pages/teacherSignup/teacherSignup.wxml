@@ -1,0 +1,46 @@
+<!--pages/teacherSignup/techerSignup.wxml-->
+<view class="page">
+  <view class="top">
+    <view class="box">
+      <view class="vitem">
+        <view class="avatar">
+          <open-data type="userAvatarUrl"></open-data>
+
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <wux-cell-group title="输入个人信息">
+    <wux-cell hover-class="none">
+      <wux-field name="name" initialValue="">
+        <wux-input label="姓名" />
+      </wux-field>
+  </wux-cell>
+ </wux-cell-group>
+ <wux-cell-group >
+    <wux-cell hover-class="none">
+      <wux-field name="mail" initialValue="">
+        <wux-input label="邮箱" />
+      </wux-field>
+  </wux-cell>
+ </wux-cell-group>
+ <wux-cell-group >
+    <wux-cell hover-class="none">
+      <wux-field name="workArea" initialValue="">
+        <wux-input label="工作单位" />
+      </wux-field>
+  </wux-cell>
+ </wux-cell-group>
+ <wux-cell-group >
+    <wux-cell hover-class="none">
+      <wux-field name="introduction" initialValue="">
+        <wux-input label="个人介绍" />
+      </wux-field>
+  </wux-cell>
+ </wux-cell-group>
+ <wux-white-space size="large" />
+ <wux-wing-blank size="default">
+ <wux-button block type="balanced" bind:click="onClick">注册</wux-button>
+ </wux-wing-blank>
+  </view>

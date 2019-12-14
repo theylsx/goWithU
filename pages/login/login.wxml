@@ -19,7 +19,7 @@
       </view>
     </view>
   </view>
-
+  <wux-white-space body-style="height: 20px" />
   <wux-wing-blank size="large">
     <wux-cell-group>
       <wux-cell title="小可爱" is-link label="为您精确推送所需内容和活动消息" data-identity="小可爱" bind:click="click"></wux-cell>

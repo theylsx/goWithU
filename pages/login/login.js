@@ -57,8 +57,8 @@ Page({
           console.log(res)
         },
       })
-      wx.switchTab({
-        url: '/pages/course/course',
+      wx.navigateTo({
+        url: '/pages/teacherSignup/teacherSignup',
       })
     }
     if (app.globalData.identity == "小可爱") {
@@ -72,8 +72,8 @@ Page({
           console.log(res)
         },
       })
-      wx.switchTab({
-        url: '/pages/course/course',
+      wx.navigateTo({
+        url: '/pages/studentSignup/studentSignup',
       })
     }
   }

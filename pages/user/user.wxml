@@ -8,10 +8,6 @@
           <open-data type="userAvatarUrl"></open-data>
           
         </view>
-        <view class="name">
-          <text>你好</text>
-          <open-data type="userNickName" lang="zh_CN"></open-data>
-        </view>
       </view>
     </view>
   </view>
