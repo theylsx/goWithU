@@ -7,7 +7,7 @@ Page({
   data: {
     Name: '',
     Hospital: '',
-    Information: '',
+    Information: 'qweqweqwe',
     OpenId: ''
 
   },
