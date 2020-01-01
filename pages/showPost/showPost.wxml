@@ -2,23 +2,23 @@
 <!--pages/showPost/showPost.wxml-->
 <wux-wing-blank size="large">
   <view>
-    <text class="title">寻找朋友</text>
+    <text class="title">{{Title}}</text>
   </view>
    <wux-white-space size="default" />
   <view class="row">
     <view class="avatar">
-      <open-data type="userAvatarUrl" ></open-data>
+      <image src="{{Avatar}}" class="img"></image>
     </view>
     <text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
     <view class="col">
-        <open-data type="userNickName" lang="zh_CN" class="text"></open-data>
+      <text class="text">{{PublisherName}}</text>
         <view class="row">
-            <text class="time">10-16</text>
+            <text class="time">{{Date}}</text>
             <text decode="{{true}}">&nbsp;</text>
-            <text class="readCount">阅读10</text>
         </view>
         
     </view>
+
     
 
 
@@ -26,7 +26,7 @@
   
   <wux-divider show-text="{{false}}" />
   <view>
-    <text>中三附属医院我想找朋友一起玩</text>
+    <text>{{Content}}</text>
   </view>
 
 </wux-wing-blank>

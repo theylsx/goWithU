@@ -1,9 +1,8 @@
 <!--pages/myStudent/myStudent.wxml-->
 <scroll-view>
-<wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="addStudent" />
-<wux-media thumb="http://47.100.39.201:80/test/image/student.png" title="王华" bindtap="tap"></wux-media>
-<wux-media thumb="http://47.100.39.201:80/test/image/student.png" title="张小森"></wux-media>
-<wux-media thumb="http://47.100.39.201:80/test/image/student.png" title="黄贵红" ></wux-media>
-
+    <wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="addStudent" />
+    <block wx:for="{{NameList}}">
+        <wux-media thumb="http://47.100.39.201:80/test/image/student.png" title="{{NameList[index]}}" id="{{OpenIdList[index]}}" bindtap="tap"></wux-media>
+    </block>
 
 </scroll-view>

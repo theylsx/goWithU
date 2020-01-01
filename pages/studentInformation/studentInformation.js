@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    Name: '',
+    Hospital: '',
+    Information: '',
+    OpenId: ''
 
   },
 
@@ -12,6 +16,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      OpenId: options.studentOpenId
+    })
+    var that = this
+    wx.request({
+      url: 'http://localhost:8080/getStudent',
+      method: 'POST',
+      data: {
+        "OpenId": this.data.OpenId
+      },
+      success: function (res) {
+        that.setData({
+          Name: res.data.name,
+          Hospital: res.data.hospital,
+          Information: res.data.information
+        })
+        console.log(that.data.Information)
+      }
+    })
 
   },
 
@@ -40,6 +63,12 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    this.setData({
+      Name: '',
+      Hospital: '',
+      Information: '',
+      OpenId: ''
+    })
 
   },
 

@@ -8,6 +8,13 @@
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+.img{
+  overflow: hidden;
+  border-radius: 50%;
+  height: 60rpx;
+  width: 60rpx;
+}
+
 .row{
   display: flex;
   flex-direction: row;

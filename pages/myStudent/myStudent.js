@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    NameList: [],
+    OpenIdList: []
 
   },
 
@@ -14,9 +16,9 @@ Page({
     })
   },
 
-  tap: function () {
+  tap: function (e) {
     wx: wx.navigateTo({
-      url: '../studentInformation/studentInformation'
+      url: '../studentInformation/studentInformation?studentOpenId=' + e.currentTarget.id
 
     })
   },
@@ -25,6 +27,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.request({
+      url: 'http://localhost:8080/getMyStudent',
+      method: 'POST',
+      data:{
+        "OpenId": "o0yYO5LCHp58ZfkHMvSI5kSPvl-4"
+      },
+      success: res=>{
+        console.log(res)
+        var mNameList = []
+        var mOpenList = []
+        for(var index in res.data){
+          mNameList.push(res.data[index].name)
+          mOpenList.push(res.data[index].openId)
+        }
+        this.setData({
+          NameList: mNameList,
+          OpenIdList: mOpenList
+        })
+      }
+    })
 
   },
 

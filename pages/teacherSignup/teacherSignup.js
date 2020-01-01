@@ -84,7 +84,7 @@ Page({
   onClick: function () {
     console.log("toast")
     wx.request({
-      url: 'https://www.tuppy.com/newTeacher',
+      url: 'https://www.tuppy.pub/newTeacher',
       method: 'POST',
       data: {
         "OpenId": app.globalData.openid,

@@ -7,12 +7,20 @@ Page({
   data: {
     current: 0,
     picList: ["/icon/math.png", "/icon/chinese.png", "/icon/english.png"],
+    dataList: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    wx.request({
+      url: 'http://localhost:8080/getAllPost',
+      method: 'Get',
+      success: res=>{
+        console.log(res)
+      }
+    })
 
   },
 
@@ -27,6 +35,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
+    wx.request({
+      url: 'http://localhost:8080/getAllPost',
+      method: 'Get',
+      success: res=>{
+        console.log(res)
+        this.setData({
+          dataList : res.data.list
+        })
+      }
+    })
 
   },
 
@@ -71,9 +89,10 @@ Page({
     })
   },
 
-  onClick: function() {
+  onClick: function(e) {
+    console.log(e)
     wx.navigateTo({
-      url: '../showPost/showPost',
+      url: '../showPost/showPost?jsonStr=' + e.currentTarget.id,
     })
   },
 

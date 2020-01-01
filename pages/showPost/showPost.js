@@ -5,6 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    Title: '',
+    Content: '',
+    Date: '',
+    PublisherName: '',
+    Id: '',
+    Avatar: ''
 
   },
 
@@ -12,6 +18,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // var id = JSON.stringify(options.jsonStr)
+    console.log(options.jsonStr)
+    this.setData({
+      Id: options.jsonStr 
+    })
+    wx.request({
+      url: 'http://localhost:8080/getPost',
+      method: 'POST',
+      data:{
+        "Id": this.data.Id
+      },
+      success: res=>{
+        console.log(res)
+        this.setData({
+          Title: res.data.Title,
+          Content: res.data.Content,
+          Date: res.data.Date,
+          PublisherName: res.data.PublisherName,
+          Avatar: res.data.Avatar
+        })
+      }
+    })
 
   },
 
@@ -33,6 +61,7 @@ Page({
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
+    console.log("hide")
 
   },
 
@@ -40,6 +69,13 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
+    console.log("unload")
+    this.setData({
+      Title: '',
+      Content: '',
+      Date: '',
+      Id: ''
+    })
 
   },
 

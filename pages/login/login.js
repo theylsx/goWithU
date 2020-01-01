@@ -66,6 +66,10 @@ Page({
       wx.navigateTo({
         url: '/pages/studentSignup/studentSignup',
       })
+    }else{
+      wx.switchTab({
+        url: '../course/course'
+      })
     }
   }
 })

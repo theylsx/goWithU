@@ -82,7 +82,7 @@ Page({
     console.log(this.data.Hospital)
     console.log("toast")
     wx.request({
-      url: 'https://www.tuppy.com/newStudent',
+      url: 'https://www.tuppy.pub/newStudent',
       method: 'POST',
       data: {
         "OpenId": app.globalData.openid,
