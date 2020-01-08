@@ -22,7 +22,11 @@
     "pages/studentInformation/studentInformation",
     "pages/addStudent/addStudent",
     "pages/teacherSignup/teacherSignup",
-    "pages/studentSignup/studentSignup"
+    "pages/studentSignup/studentSignup",
+    "pages/studentFeedbackList/studentFeedbackList",
+    "pages/studentFeedback/studentFeedback",
+    "pages/teacherFeedbackList/teacherFeedbackList",
+    "pages/studentAppointment/studentAppointment"
   ],
   "window": {
     "backgroundTextStyle": "light",

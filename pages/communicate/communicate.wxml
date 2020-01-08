@@ -5,7 +5,7 @@
       <wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="clickToPost" />
     <block wx:for="{{dataList}}">
       <wux-cell-group>
-        <wux-cell thumb="/icon/chinese.png" bindtap="onClick" title="{{item.title}}" label="中三附属医院" id="{{item.id}}">
+        <wux-cell thumb="/icon/chinese.png" bindtap="onClick" title="{{item.title}}" label="中三附属医院" id="{{item.stringId}}">
         </wux-cell>
       </wux-cell-group>
     </block>

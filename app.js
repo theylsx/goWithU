@@ -5,7 +5,11 @@ App({
     identity: "",
     appid: 'wx882769e007a9573e',
     secret: '55867e74554df906a8f7d81036c91fa4',
-    openid: ""
+    openId: "",
+    type: "",
+    name: '',
+    // url: 'http://localhost:8080',
+    url: 'https://www.tuppy.pub'
   },
   onLaunch: function() {
     // 展示本地存储能力
@@ -19,17 +23,35 @@ App({
         if (res.code) {
           console.log("res.code:" + res.code);
           wx.request({
-            url: 'https://www.tuppy.pub/getOpenId',
+            url: that.globalData.url + '/getOpenId',
             method: 'POST',
-            data:{
+            data: {
               "code": res.code
             },
-            success: res=>{
+            success: res => {
               console.log(res.data)
-              that.globalData.openid = res.data
+              that.globalData.openId = res.data
+              wx.request({
+                url: that.globalData.url + '/goWithU',
+                method: 'POST',
+                header: {
+                  'Content-Type': 'application/json;charset=UTF-8'
+                },
+                data: {
+                  "openId":res.data 
+                },
+                success: res => {
+                  console.log(res)
+                  that.globalData.type = res.data.type
+                  that.globalData.name = res.data.name
+                }
+              })
+            },
+            fail: res => {
+              console.log(res)
             }
           })
-          } else {
+        } else {
           console.log('获取用户登录态失败！' + res.errMsg)
         }
       }

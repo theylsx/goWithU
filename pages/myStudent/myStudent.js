@@ -1,4 +1,5 @@
 // pages/myStudent/myStudent.js
+const app = getApp()
 Page({
 
   /**
@@ -28,10 +29,10 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'http://localhost:8080/getMyStudent',
+      url: app.globalData.url + '/getMyStudent',
       method: 'POST',
       data:{
-        "OpenId": "o0yYO5LCHp58ZfkHMvSI5kSPvl-4"
+        "OpenId":app.globalData.openId 
       },
       success: res=>{
         console.log(res)
@@ -49,6 +50,7 @@ Page({
     })
 
   },
+  
 
   /**
    * 生命周期函数--监听页面初次渲染完成

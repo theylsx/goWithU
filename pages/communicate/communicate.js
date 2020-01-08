@@ -1,4 +1,5 @@
 // pages/communicate/communicate.js
+const app = getApp()
 Page({
 
   /**
@@ -13,11 +14,18 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
+  onLoad: function (options) {
+    var that = this
     wx.request({
-      url: 'http://localhost:8080/getAllPost',
+      url: app.globalData.url + '/getAllPost',
       method: 'Get',
-      success: res=>{
+      success: res => {
+        console.log(res)
+        that.setData({
+          dataList: res.data.list
+        })
+      },
+      fail: res => {
         console.log(res)
       }
     })
@@ -27,22 +35,26 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
+    var that = this
     wx.request({
-      url: 'http://localhost:8080/getAllPost',
+      url: app.globalData.url + '/getAllPost',
       method: 'Get',
-      success: res=>{
+      success: res => {
         console.log(res)
-        this.setData({
-          dataList : res.data.list
+        that.setData({
+          dataList: res.data.list
         })
+      },
+      fail: res => {
+        console.log(res)
       }
     })
 
@@ -51,45 +63,45 @@ Page({
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   },
 
-  clickToPost: function() {
+  clickToPost: function () {
     wx.navigateTo({
       url: '../post/post',
     })
   },
 
-  onClick: function(e) {
+  onClick: function (e) {
     console.log(e)
     wx.navigateTo({
       url: '../showPost/showPost?jsonStr=' + e.currentTarget.id,

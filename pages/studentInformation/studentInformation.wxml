@@ -19,7 +19,9 @@
 
   <wux-cell hover-class="none" thumb="../../icon/hospital.png" title="医院" extra="{{Hospital}}"></wux-cell>
   <wux-cell hover-class="none">
-  <wux-textarea thumb="../../icon/introduction.png" label="自我介绍" controlled="true" rows="3" value="{{Information}}" />
+  <wux-textarea thumb="../../icon/introduction.png" disabled label="自我介绍" controlled="true" rows="3" value="{{Information}}" />
   </wux-cell>
 
+    <wux-button block type="stable" bind:click="onClick">学习反馈</wux-button>
+    <wux-button block type="stable" bind:tap="addTimes">增加预约次数</wux-button>
 </view>

@@ -7,7 +7,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    identity: ""
+    identity: "",
+    type: app.globalData.type
   },
 
   /**
@@ -15,8 +16,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      identity: app.globalData.identity
+      identity: app.globalData.identity,
+      type : app.globalData.type
     })
+    console.log(this.data.type)
   },
 
   /**
@@ -77,6 +80,12 @@ Page({
   learn: function(){
     wx.navigateTo({
       url: '../goods/goods',
+    })
+  },
+
+  feedbackList: function(){
+    wx.navigateTo({
+      url:'../studentFeedbackList/studentFeedbackList',
     })
   },
 

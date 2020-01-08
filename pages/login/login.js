@@ -45,19 +45,17 @@ Page({
   click: function(res){
     app.globalData.identity = res.currentTarget.dataset.identity
     console.log(app.globalData.identity)
-    console.log(app.globalData.userInfo.openid)
     if (app.globalData.identity == "志愿者"){
-     
       wx.navigateTo({
         url: '/pages/teacherSignup/teacherSignup',
       })
     }
-    if (app.globalData.identity == "小可爱") {
+    else if (app.globalData.identity == "小可爱") {
       wx.request({
         url: 'https://www.tuppy.pub/newStudent',
         method: 'POST',
         data: {
-          "openId": app.globalData.openid
+          "openId": app.globalData.openId
         },
         success: res => {
           console.log(res)

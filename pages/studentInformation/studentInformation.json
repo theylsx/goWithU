@@ -4,5 +4,7 @@
     "wux-white-space": "../../dist/white-space/index",
     "wux-cell-group": "../../dist/cell-group/index",
     "wux-cell": "../../dist/cell/index",
-    "wux-textarea": "../../dist/textarea/index"}
+    "wux-textarea": "../../dist/textarea/index",
+    "wux-button": "../../dist/button/index"
+  }
 }

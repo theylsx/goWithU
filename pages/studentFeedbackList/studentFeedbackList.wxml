@@ -1,0 +1,7 @@
+<!--pages/studentFeedbackList/studentFeedbackList.wxml-->
+<wux-cell-group>
+<block wx:for="{{feedbackList}}">
+  <wux-cell  bindtap="onClick" title="{{item.title}}" id="{{item.stringId}}"></wux-cell>
+</block>
+
+</wux-cell-group>

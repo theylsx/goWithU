@@ -5,7 +5,9 @@ Page({
   data: {
     userInfo: null,
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    formId: '',
+    token: ''
   },
 
   onLoad: function() {
@@ -40,59 +42,17 @@ Page({
   },
   click: function() {
     var judge = false
-    console.log(app.globalData.openid)
-    // wx.downloadFile({
-
-    //   url: 'https://www.tuppy.pub:443/test/file/course6.pptx',
-
-    //   success: function (res) {
-
-    //     var filePath = res.tempFilePath
-
-    //     wx.openDocument({
-
-    //       filePath: filePath,
-         
-
-    //       success: function (res) {
-    //         console.log(filePath)
-
-    //         console.log('打开文档成功')
-
-    //       }
-
-    //     })
-
-    //   }
-
-    // })
-    wx.request({
-      url: 'https://www.tuppy.pub/goWithU',
-      method: 'POST',
-      header:
-        { 'Content-Type': 'application/json;charset=UTF-8' },
-      data: {
-        "openId": app.globalData.openid
-      },
-      success: res => {
-        console.log(res.data)
-        if(res.data.openId != null){
-          console.log("success")
-          wx.switchTab({
-            url: '../course/course',
-          })
-        }else{
-          console.log(app.globalData.userInfo)
-          wx.navigateTo({
-            url: '../login/login',
-          })
-        } 
-      },
-      fail: res => {
-        wx.navigateTo({
-          url: '../login/login',
-        })
-      }
-    })
+    console.log(app.globalData.openId)
+    console.log(app.globalData.type)
+    if (app.globalData.type != null) {
+      wx.switchTab({
+        url: '../course/course',
+      })
+    } else {
+      console.log(app.globalData.userInfo)
+      wx.navigateTo({
+        url: '../login/login',
+      })
+    }
   }
 })

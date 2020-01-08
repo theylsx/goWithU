@@ -6,22 +6,22 @@ Page({
    * 页面的初始数据
    */
   data: {
-    Name:'',
-    Place:'',
-    Email:'',
-    Information:''
+    Name: '',
+    Place: '',
+    Email: '',
+    Information: ''
 
   },
-  getName:function(e){
+  getName: function (e) {
     this.data.Name = e.detail.value;
   },
-  getPlace:function(e){
+  getPlace: function (e) {
     this.data.Place = e.detail.value;
   },
-  getEmail:function(e){
+  getEmail: function (e) {
     this.data.Email = e.detail.value;
   },
-  getInformation:function(e){
+  getInformation: function (e) {
     this.data.Information = e.detail.value;
   },
 
@@ -84,27 +84,35 @@ Page({
   onClick: function () {
     console.log("toast")
     wx.request({
-      url: 'https://www.tuppy.pub/newTeacher',
+      url: app.globalData.url + '/newTeacher',
       method: 'POST',
       data: {
-        "OpenId": app.globalData.openid,
+        "OpenId": app.globalData.openId,
         "Name": this.data.Name,
         "Email": this.data.Email,
         "Place": this.data.Place,
         "Information": this.data.Information,
 
       },
-    }),
-      wx.showToast({
-        title: '已提交注册信息',
-        duration: 1500
-      })
-    setTimeout(function () {
-      wx.switchTab({
-        url: '../course/course',
-      })
-    }, 1500)
-
-    console.log("switch")
+      success: res => {
+        app.globalData.type = '1'
+        wx.showToast({
+          title: '已提交注册信息',
+          duration: 1500
+        })
+        setTimeout(function () {
+          wx.switchTab({
+            url: '../course/course',
+          })
+        }, 1500)
+      },
+      fail: function (res) {
+        console.log(res)
+        wx.showToast({
+          title: '出现错误',
+          duration: 1500
+        })
+      }
+    })
   }
 })

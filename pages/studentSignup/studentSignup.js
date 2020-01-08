@@ -6,20 +6,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    Name:'',
-    Hospital:'',
-    Information:''
+    name: '',
+    hospital: '',
+    information: ''
 
   },
-  getName: function(e){
-    this.data.Name = e.detail.value;
+  getName: function (e) {
+    this.setData({
+      name: e.detail.value
+    })
   },
 
-  getHospital: function(e){
-    this.data.Hospital= e.detail.value;
+  getHospital: function (e) {
+    this.setData({
+      hospital: e.detail.value
+    })
   },
-  getInfomation: function(e){
-    this.data.Information = e.detail.value;
+  getInformation: function (e) {
+    this.setData({
+      information: e.detail.value
+    })
   },
 
   /**
@@ -79,16 +85,16 @@ Page({
   },
 
   onClick: function () {
-    console.log(this.data.Hospital)
-    console.log("toast")
+    var that = this
+    console.log(that.data)
     wx.request({
-      url: 'https://www.tuppy.pub/newStudent',
+      url: app.globalData.url + '/newStudent',
       method: 'POST',
       data: {
-        "OpenId": app.globalData.openid,
-        "Name": this.data.Name,
-        "Hospital": this.data.Hospital,
-        "Information": this.data.Information,
+        openId: app.globalData.openId,
+        name: that.data.name,
+        hospital: that.data.hospital,
+        information: that.data.information,
 
       },
       success: res => {
@@ -103,6 +109,9 @@ Page({
           })
         }, 1500)
       },
+      fail: res => {
+        console.log(res)
+      }
     })
 
     console.log("switch")

@@ -1,0 +1,98 @@
+<!--pages/studentFeedback/studentFeedback.wxml-->
+<wux-cell-group title="基本信息">
+  <wux-cell hover-class="none">
+
+    <wux-input label="学生姓名" bind:change="getStudentName" controlled value="{{studentName}}" />
+
+  </wux-cell>
+  <wux-cell hover-class="none">
+
+    <wux-input label="班主任姓名" bind:change="getHeadTeacher" controlled="true" value="{{headTeacher}}" />
+
+  </wux-cell>
+  <wux-cell hover-class="none">
+
+    <wux-input label="日期" bind:change="getDate" controlled="true" value="{{date}}" />
+
+  </wux-cell>
+</wux-cell-group>
+<wux-cell-group title="学习科目">
+  <wux-cell hover-class="none">
+
+    <wux-input label="科目" bind:change="getClassName" controlled="true" value="{{className}}" />
+
+  </wux-cell>
+  <wux-cell hover-class="none">
+
+    <wux-input label="教师姓名" bind:change="getTeacher" controlled="true" value="{{teacher}}" />
+
+  </wux-cell>
+</wux-cell-group>
+<wux-cell-group title="你的学习目标">
+  <wux-cell hover-class="none">
+
+    <wux-input label="目标" bind:change="getGoal" controlled="true" value="{{goal}}" />
+
+  </wux-cell>
+</wux-cell-group>
+<wux-cell-group title="教学进度">
+
+
+  <wux-cell hover-class="none">
+
+    <wux-input label="课程开展次数" bind:change="getClassNum" controlled="true" value="{{classNum}}" />
+
+  </wux-cell>
+  <wux-cell hover-class="none">
+
+    <wux-input label="线下授课次数" bind:change="getOfflineNum" controlled="true" value="{{offlineNum}}" />
+
+  </wux-cell>
+  <wux-cell hover-class="none">
+
+    <wux-input label="线上授课次数" bind:change="getOnlineNum" controlled="true" value="{{onlineNum}}" />
+
+  </wux-cell>
+  <wux-radio-group name="select" value="{{ progress }}" title="课程完成情况" bind:change="onChangeProgress">
+    <wux-radio title="未完成教学目标" value="1" />
+    <wux-radio title="完成教学目标未考核" value="2" />
+    <wux-radio title="完成教学目标已考核" value="3" />
+  </wux-radio-group>
+</wux-cell-group>
+<wux-radio-group name="select" value="{{ difficulty}}" title="课程难度" bind:change="onChangeDifficulty">
+  <wux-radio title="简单" value="1" />
+  <wux-radio title="适中" value="2" />
+  <wux-radio title="困难" value="3" />
+</wux-radio-group>
+
+<wux-radio-group name="select" value="{{ method }}" title="对教师教学方法的评价" bind:change="onChangeMethod">
+  <wux-radio title="优秀" value="1" />
+  <wux-radio title="良好" value="2" />
+  <wux-radio title="较差" value="3" />
+</wux-radio-group>
+
+<wux-radio-group name="select" value="{{ attitude}}" title="对教师教学态度的评价" bind:change="onChangeAttitude">
+  <wux-radio title="积极的" value="1" />
+  <wux-radio title="消极的" value="2" />
+  <wux-radio title="普通的" value="3" />
+</wux-radio-group>
+
+<wux-cell-group title="课程学习收获">
+  <wux-cell hover-class="none">
+
+    <wux-input label="收获" bind:change="getGains" controlled="true" value="{{gains}}" />
+
+  </wux-cell>
+</wux-cell-group>
+
+<wux-cell-group title="你对我们的建议">
+  <wux-cell hover-class="none">
+
+    <wux-input label="建议" bind:change="getRecommend" controlled="true" value="{{recommend}}" />
+
+  </wux-cell>
+</wux-cell-group>
+
+<wux-wing-blank size="default">
+  <wux-button block type="balanced" bind:click="onClick">保存</wux-button>
+</wux-wing-blank>

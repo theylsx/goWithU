@@ -1,0 +1,17 @@
+<!--pages/studentAppointment/studentAppointment.wxml-->
+<wux-cell-group title="预约课程(不能为纯数字)">
+    <wux-cell hover-class="none">
+      <wux-field name="name" initialValue="">
+        <wux-input label="课程名称" bind:change="getClassName"/>
+      </wux-field>
+    </wux-cell>
+  </wux-cell-group>
+  <wux-cell-group title="时间(格式为：xx月xx日)">
+    <wux-cell hover-class="none">
+      <wux-field name="mail" initialValue="">
+        <wux-input label="时间" bind:change="getTime"/>
+      </wux-field>
+    </wux-cell>
+  </wux-cell-group>
+ <wux-white-space body-style="height: 20px" />
+    <button  bind:tap="formSubmit">预约</button>

@@ -1,4 +1,5 @@
 // pages/studentInformation/studentInformation.js
+const app = getApp()
 Page({
 
   /**
@@ -11,6 +12,17 @@ Page({
     OpenId: ''
 
   },
+  addTimes: function(){
+    wx.requestSubscribeMessage({
+      tmplIds: ['-LcIeb8ranqUmSo1oBVfxkuAmLLdbhupFlZ1u6o15Mk'],
+      success(res) {
+        console.log(res)
+      },
+      fail(res) {
+        console.log(res)
+      }
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
@@ -21,7 +33,7 @@ Page({
     })
     var that = this
     wx.request({
-      url: 'http://localhost:8080/getStudent',
+      url: app.globalData.url + '/getStudent',
       method: 'POST',
       data: {
         "OpenId": this.data.OpenId
@@ -32,10 +44,15 @@ Page({
           Hospital: res.data.hospital,
           Information: res.data.information
         })
-        console.log(that.data.Information)
       }
     })
 
+  },
+
+  onClick: function(){
+    wx.navigateTo({
+      url: '../teacherFeedbackList/teacherFeedbackList?id=' + this.data.OpenId
+    })
   },
 
   /**

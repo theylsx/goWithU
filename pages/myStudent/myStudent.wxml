@@ -4,5 +4,6 @@
     <block wx:for="{{NameList}}">
         <wux-media thumb="http://47.100.39.201:80/test/image/student.png" title="{{NameList[index]}}" id="{{OpenIdList[index]}}" bindtap="tap"></wux-media>
     </block>
+    
 
 </scroll-view>

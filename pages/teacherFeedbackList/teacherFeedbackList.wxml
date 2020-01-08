@@ -1,0 +1,8 @@
+<!--pages/teacherFeedbackList/teacherFeedbackList.wxml-->
+<wux-cell-group>
+ <wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="addFeedback" />
+<block wx:for="{{feedbackList}}">
+<wux-cell  bindtap="onClick" title="{{item.title}}" id="{{item.stringId}}"></wux-cell>
+</block>
+
+</wux-cell-group>

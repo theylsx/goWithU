@@ -1,4 +1,5 @@
 // pages/showPost/showPost.js
+const app = getApp()
 Page({
 
   /**
@@ -24,10 +25,10 @@ Page({
       Id: options.jsonStr 
     })
     wx.request({
-      url: 'http://localhost:8080/getPost',
+      url: app.globalData.url + '/getPost',
       method: 'POST',
       data:{
-        "Id": this.data.Id
+        stringId: this.data.Id
       },
       success: res=>{
         console.log(res)

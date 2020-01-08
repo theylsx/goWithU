@@ -1,10 +1,16 @@
 // pages/teacherInformation/teacherInformation.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    openId: '',
+    name: '',
+    email: '',
+    place: '',
+    introduction: ''
 
   },
 
@@ -12,7 +18,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      openId: options.teacherOpenId
+    })
+    var that = this
+    wx.request({
+      url: app.globalData.url + '/getTeacher',
+      method: 'POST',
+      data: {
+        openId: that.data.openId
+      },
+      success: function (res) {
+        console.log(res)
+        that.setData({
+          name: res.data.name,
+          email: res.data.email,
+          place: res.data.place,
+          introduction: res.data.information
+        })
+        console.log(that.data)
+      },
+      fail: res => {
+        console.log(res)
+      }
+    })
+  },
 
+  onClick: function(){
+    wx.navigateTo({
+      url: '../studentAppointment/studentAppointment?teacherOpenId=' + this.data.openId + '&name='+this.data.name
+    })
   },
 
   /**

@@ -77,12 +77,12 @@ Page({
 
   onClick: function() {
     wx.request({
-        url: 'http://localhost:8080/post',
+        url: app.globalData.url + '/post',
         method: 'POST',
         data: {
           'Title': this.data.Title,
           'Content': this.data.Content,
-          'OpenId': "o0yYO5LCHp58ZfkHMvSI5kSPvl-4",
+          'OpenId': app.globalData.openId,
           'Date': util.formatTime(new Date()),
           'UserAvatar': app.globalData.userInfo.avatarUrl
         },

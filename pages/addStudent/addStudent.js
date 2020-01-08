@@ -13,12 +13,12 @@ Page({
 
   showToast: function () {
     wx.request({
-      url: 'http://localhost:8080/addMyStudent',
+      url: app.globalData.url + '/addMyStudent',
       method: 'POST',
       data: {
         "Name": this.data.Name,
         "Hospital": this.data.Hospital,
-        "MyOpenId": "o0yYO5LCHp58ZfkHMvSI5kSPvl-4",
+        "MyOpenId": app.globalData.openId,
       },
       success: res => {
         if (res.data == "fail") {
@@ -27,12 +27,12 @@ Page({
             icon: 'loading',
             duration: 1500
           })
-        }else if(res.data == "exist"){
+        } else if (res.data == "exist") {
           wx.showToast({
             title: '学生已存在',
             duration: 1500
           })
-        } 
+        }
         else {
           wx.showToast({
             title: '添加成功',
@@ -45,9 +45,7 @@ Page({
             complete: function (res) { },
           })
           setTimeout(function () {
-            wx.navigateTo({
-              url: '../myStudent/myStudent'
-            })
+            wx.navigateBack({})
           }, 1500);
         }
       }

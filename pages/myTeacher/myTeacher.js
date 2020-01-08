@@ -1,16 +1,19 @@
 // pages/myTeacher/myTeacher.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    NameList: [],
+    OpenIdList: []
 
   },
 
-  tap: function () {
-    wx: wx.navigateTo({
-      url: '../teacherInformation/teacherInformation'
+  tap: function (e) {
+     wx.navigateTo({
+      url: '../teacherInformation/teacherInformation?teacherOpenId=' + e.currentTarget.id
 
     })
   },
@@ -19,7 +22,29 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: app.globalData.url + '/getMyTeacher',
+      method: 'POST',
+      data: {
+        "OpenId": app.globalData.openId
+      },
+      success: res => {
+        console.log(res)
+        var mNameList = []
+        var mOpenList = []
+        for (var index in res.data) {
+          mNameList.push(res.data[index].name)
+          mOpenList.push(res.data[index].openId)
+        }
+        this.setData({
+          NameList: mNameList,
+          OpenIdList: mOpenList
+        })
+      },
+      fail: res =>{
+        console.log(res)
+      }
+    })
   },
 
   /**
