@@ -16,9 +16,19 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      identity: app.globalData.identity,
-      type : app.globalData.type
+      type: app.globalData.type
     })
+    if (this.data.type == 0) {
+      this.setData({
+        identity: "小可爱"
+      }) 
+    }
+    else if (this.data.type == 1) {
+      this.setData({
+        identity: "志愿者"
+      }) 
+    }
+
     console.log(this.data.type)
   },
 
