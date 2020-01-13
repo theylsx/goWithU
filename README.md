@@ -1,2 +1,2 @@
 goWithU
-this is our miniprogram
+hello
