@@ -1,10 +1,12 @@
+// pages/teacherTalk/teacherTalk.js
+
+
 const app = getApp();
 var inputVal = '';
 var msgList = [];
 var windowWidth = wx.getSystemInfoSync().windowWidth;
 var windowHeight = wx.getSystemInfoSync().windowHeight;
 var keyHeight = 0;
-
 
 
 Page({
@@ -15,35 +17,42 @@ Page({
   data: {
     scrollHeight: '100vh',
     inputBottom: 0,
-    inputValue: ""
+    inputValue: "",
+    studentOpenId:"",
+    studentName:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    
+    this.setData({
+      studentOpenId: options.studentOpenId,
+      studentName:  options.studentName
+    })
+    console.log(this.data.studentName);
+    wx.setNavigationBarTitle({ title: this.data.studentName })
     wx.request({
       url: app.globalData.url + '/getChatRecord',
       method: 'POST',
       data: {
-        "studentOpenId": app.globalData.openId
+        "studentOpenId": this.data.studentOpenId
       },
-  
-    
+
+
       success: res => {
-    
+
         console.log(res)
-       
         inputVal = '';
         for (var index in res.data) {
           var mSpeaker = res.data[index].speaker
 
           if (mSpeaker == null) {
-            mSpeaker = "customer"
+            mSpeaker = "server"
           }
           else {
-            mSpeaker = "server"
+            mSpeaker = "customer"
           }
           msgList.push(
             {
@@ -52,8 +61,8 @@ Page({
               content: res.data[index].chatContent
             }
           )
-        
-      }
+
+        }
 
         this.setData({
           cusHeadIcon: app.globalData.userInfo.avatarUrl,
@@ -70,10 +79,31 @@ Page({
   },
 
   /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    //清空
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
   },
 
   /**
@@ -90,10 +120,14 @@ Page({
 
   },
 
-
   /**
-   * 获取聚焦
+   * 用户点击右上角分享
    */
+  onShareAppMessage: function () {
+
+  },
+
+
   focus: function (e) {
     keyHeight = e.detail.height;
     this.setData({
@@ -120,27 +154,28 @@ Page({
 
   },
 
- 
 
-  getInput: function(e){
+
+  getInput: function (e) {
     console.log(e);
     this.setData({
-      inputValue: e.detail.value, 
+      inputValue: e.detail.value,
     })
   },
 
- /**
-   * 发送点击监听
-   */
-  studentSendButton: function(){
-    if(this.data.inputValue != ""){
+  /**
+    * 发送点击监听
+    */
+  studentSendButton: function () {
+    if (this.data.inputValue != "") {
       //访问服务器
       var that = this
       wx.request({
-        url: app.globalData.url + '/addStudentChatToList',
+        url: app.globalData.url + '/addTeacherChatToList',
         method: 'POST',
         data: {
-          studentOpenId: app.globalData.openId,
+          studentOpenId: this.data.studentOpenId,
+          teacherOpenId: app.globalData.openId,
           chatContent: that.data.inputValue
         },
         success: function (res) {
@@ -172,11 +207,10 @@ Page({
 
     }
 
-  
+
   },
 
 
 
-  
 
 })

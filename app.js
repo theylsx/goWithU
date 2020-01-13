@@ -8,8 +8,8 @@ App({
     openId: "",
     type: "",
     name: '',
-    // url: 'http://localhost:8080',
-    url: 'https://www.tuppy.pub'
+     url: 'http://127.0.0.1:8080',
+    //url: 'https://www.tuppy.pub'
   },
   onLaunch: function() {
     // 展示本地存储能力

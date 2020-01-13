@@ -117,9 +117,17 @@ myTeacher: function(){
   },
 
   talk: function(){
+    if(this.data.type == 0){
     wx.navigateTo({
       url: '../talk/talk',
-    })
+      })
+    }
+    else if(this.data.type == 1){
+      wx.navigateTo({
+        url: '../talkWithStudent/talkWithStudent',
+      })
+    }
+   
   }
 
 })

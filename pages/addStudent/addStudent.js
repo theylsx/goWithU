@@ -8,7 +8,6 @@ Page({
   data: {
     Name: '',
     Hospital: ''
-
   },
 
   showToast: function () {
