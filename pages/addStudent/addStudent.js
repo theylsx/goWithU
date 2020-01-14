@@ -8,7 +8,6 @@ Page({
   data: {
     Name: '',
     Hospital: ''
-
   },
 
   showToast: function () {
@@ -24,13 +23,14 @@ Page({
         if (res.data == "fail") {
           wx.showToast({
             title: '找不到该学生',
-            icon: 'loading',
-            duration: 1500
+            icon:"none",
+            duration: 500
           })
         } else if (res.data == "exist") {
           wx.showToast({
             title: '学生已存在',
-            duration: 1500
+            icon: "none",
+            duration: 500
           })
         }
         else {

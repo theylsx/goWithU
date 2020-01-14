@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "wux-media": "../../dist/media/index",
+    "wux-icon": "../../dist/icon/index",
+    "wux-button": "../../dist/button/index"
+  },
+  "navigationBarTitleText": "我的学生"
+}

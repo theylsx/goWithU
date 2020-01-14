@@ -1,4 +1,4 @@
-// pages/myStudent/myStudent.js
+// pages/talkWithStudent/talkWithStudent.js
 const app = getApp()
 Page({
 
@@ -8,18 +8,13 @@ Page({
   data: {
     NameList: [],
     OpenIdList: []
-
   },
 
-  addStudent: function () {
-    wx.navigateTo({
-      url: '../addStudent/addStudent',
-    })
-  },
 
   tap: function (e) {
+    console.log(e)
     wx: wx.navigateTo({
-      url: '../studentInformation/studentInformation?studentOpenId=' + e.currentTarget.id
+      url: '../teacherTalk/teacherTalk?studentOpenId=' + e.currentTarget.id + "&studentName=" + e.target.dataset.title
 
     })
   },
@@ -29,42 +24,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: app.globalData.url + '/getMyStudent',
-      method: 'POST',
-      data:{
-        "OpenId":app.globalData.openId 
-      },
-      success: res=>{
-        console.log(res)
-        var mNameList = []
-        var mOpenList = []
-        for(var index in res.data){
-          mNameList.push(res.data[index].name)
-          mOpenList.push(res.data[index].openId)
-        }
-        this.setData({
-          NameList: mNameList,
-          OpenIdList: mOpenList
-        })
-      }
-    })
-
-  },
-  
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    wx.request({
-      url: app.globalData.url + '/getMyStudent',
+      url: app.globalData.url + '/getMyTalkStudent',
       method: 'POST',
       data: {
         "OpenId": app.globalData.openId
@@ -83,6 +43,20 @@ Page({
         })
       }
     })
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
 
   },
 

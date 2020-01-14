@@ -27,6 +27,8 @@
     "pages/studentFeedback/studentFeedback",
     "pages/teacherFeedbackList/teacherFeedbackList",
     "pages/studentAppointment/studentAppointment",
+    "pages/talkWithStudent/talkWithStudent",
+    "pages/teacherTalk/teacherTalk",
     "pages/studentWorkList/studentWorkList",
     "pages/addWork/addWork"
   ],
