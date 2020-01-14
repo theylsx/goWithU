@@ -23,5 +23,6 @@
   </wux-cell>
 
     <wux-button block type="stable" bind:click="onClick">学习反馈</wux-button>
+    <wux-button block type="stable" bind:tap="work">学生作业</wux-button>
     <wux-button block type="stable" bind:tap="addTimes">增加预约次数</wux-button>
 </view>

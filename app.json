@@ -28,7 +28,9 @@
     "pages/teacherFeedbackList/teacherFeedbackList",
     "pages/studentAppointment/studentAppointment",
     "pages/talkWithStudent/talkWithStudent",
-    "pages/teacherTalk/teacherTalk"
+    "pages/teacherTalk/teacherTalk",
+    "pages/studentWorkList/studentWorkList",
+    "pages/addWork/addWork"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -51,7 +53,7 @@
         "selectedIconPath": "icon/communicate51.png",
         "iconPath": "icon/communicatecd.png",
         "pagePath": "pages/communicate/communicate",
-        "text": "社区"
+        "text": "科普"
       },
       {
         "selectedIconPath": "icon/user51.png",

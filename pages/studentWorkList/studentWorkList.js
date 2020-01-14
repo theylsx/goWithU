@@ -1,4 +1,4 @@
-// pages/studentInformation/studentInformation.js
+// pages/studentWorkList/studentWorkList.js
 const app = getApp()
 Page({
 
@@ -6,22 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    Name: '',
-    Hospital: '',
-    Information: 'qweqweqwe',
-    OpenId: ''
+    openId: "",
+    workList: []
 
-  },
-  addTimes: function(){
-    wx.requestSubscribeMessage({
-      tmplIds: ['-LcIeb8ranqUmSo1oBVfxkuAmLLdbhupFlZ1u6o15Mk'],
-      success(res) {
-        console.log(res)
-      },
-      fail(res) {
-        console.log(res)
-      }
-    })
   },
 
   /**
@@ -29,35 +16,34 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      OpenId: options.studentOpenId
+      openId: options.id
     })
     var that = this
     wx.request({
-      url: app.globalData.url + '/getStudent',
+      url: app.globalData.url + "/getStudentWork",
       method: 'POST',
       data: {
-        "OpenId": this.data.OpenId
+        studentOpenId: that.data.openId
       },
-      success: function (res) {
+      success: res => {
+        console.log(res)
         that.setData({
-          Name: res.data.name,
-          Hospital: res.data.hospital,
-          Information: res.data.information
+          workList: res.data
         })
       }
     })
 
   },
 
-  onClick: function(){
+  clickToAdd: function(){
     wx.navigateTo({
-      url: '../teacherFeedbackList/teacherFeedbackList?id=' + this.data.OpenId
+      url: '../addWork/addWork?studentOpenId=' + this.data.openId,
     })
   },
 
-  work: function(){
+  onClick: function(e){
     wx.navigateTo({
-      url: '../studentWorkList/studentWorkList?id=' + this.data.OpenId
+      url: "../homework/homework?id=" + e.currentTarget.id
     })
   },
 
@@ -86,12 +72,6 @@ Page({
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-    this.setData({
-      Name: '',
-      Hospital: '',
-      Information: '',
-      OpenId: ''
-    })
 
   },
 
