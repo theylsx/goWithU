@@ -8,7 +8,7 @@
 .endBox{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   
   position: fixed;
   width: 100%;

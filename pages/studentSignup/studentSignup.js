@@ -88,14 +88,13 @@ Page({
     var that = this
     console.log(that.data)
     wx.request({
-      url: app.globalData.url + '/newStudent',
+      url: app.globalData.url + '/newStudent/',
       method: 'POST',
       data: {
         openId: app.globalData.openId,
         name: that.data.name,
         hospital: that.data.hospital,
         information: that.data.information,
-
       },
       success: res => {
         console.log(res)

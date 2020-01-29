@@ -7,7 +7,8 @@ Page({
    */
   data: {
     openId: "",
-    workList: []
+    workList: [],
+    idList: []
 
   },
 
@@ -27,8 +28,14 @@ Page({
       },
       success: res => {
         console.log(res)
+        var tmpList = []
+        for (var i = 0; i < res.data.length; i++) {
+          var id = res.data[i].id.timeSecond.toString(16) + res.data[i].id.machineIdentifier.toString(16) + res.data[i].id.processIdentifier.toString(16) + res.data[i].id.counter.toString(16)
+          tmpList.push(id)
+        }
         that.setData({
-          workList: res.data
+          workList: res.data,
+          idList: tmpList
         })
       }
     })
@@ -43,7 +50,7 @@ Page({
 
   onClick: function(e){
     wx.navigateTo({
-      url: "../homework/homework?id=" + e.currentTarget.id
+      url: "../homework/homework?id=" + e.currentTarget.id + "&studentOpenId=" + this.data.openId
     })
   },
 
@@ -58,7 +65,20 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var that = this
+    wx.request({
+      url: app.globalData.url + "/getStudentWork",
+      method: 'POST',
+      data: {
+        studentOpenId: that.data.openId
+      },
+      success: res => {
+        console.log(res)
+        that.setData({
+          workList: res.data
+        })
+      }
+    })
   },
 
   /**

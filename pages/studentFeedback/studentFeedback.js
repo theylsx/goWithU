@@ -91,7 +91,7 @@ Page({
       url: app.globalData.url + '/getFeedback',
       method: 'POST',
       data: {
-        stringId: that.data.id
+        id: that.data.id
       },
       success: function (res) {
         that.setData({
@@ -150,7 +150,7 @@ Page({
       url: app.globalData.url + '/saveFeedback',
       method: 'POST',
       data: {
-        stringId: that.data.id,
+        id: that.data.id,
         studentName: that.data.studentName,
         headTeacher: that.data.headTeacher,
         date: that.data.date,

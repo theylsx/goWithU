@@ -7,8 +7,8 @@ Page({
    */
   data: {
     studentOpenId: '',
-    feedbackList: []
-
+    feedbackList: [],
+    idList: []
   },
 
   /**
@@ -26,8 +26,16 @@ Page({
         openId: that.data.studentOpenId
       },
       success: res => {
+        console.log(res.data)
+        var tmpList = []
+        for (var i = 0; i < res.data.length; i++) {
+          console.log(res.data[i])
+          var id = res.data[i].id.timeSecond.toString(16) + res.data[i].id.machineIdentifier.toString(16) + res.data[i].id.processIdentifier.toString(16) + res.data[i].id.counter.toString(16)
+          tmpList.push(id)
+        }
         that.setData({
-          feedbackList: res.data
+          feedbackList: res.data,
+          idList: tmpList
         })
       }
     })

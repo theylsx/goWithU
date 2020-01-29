@@ -1,4 +1,4 @@
 <wux-cell-group wx:for="{{workList}}">
-  <wux-cell thumb="/icon/jobs.png" bindtap="onClick" title="{{item.workName}}" id="{{item.stringId}}"></wux-cell>
+  <wux-cell thumb="/icon/jobs.png" bindtap="onClick" title="{{item.workName}}" id="{{idList[index]}}"></wux-cell>
 </wux-cell-group>
 <wux-icon type="md-add-circle" color="#33cd5f" size="64" class="icon" bindtap="clickToAdd" />

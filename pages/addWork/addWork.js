@@ -21,8 +21,8 @@ Page({
     mTitle: '',
     title: [],
     answer: [],
-    selection:[]
-    
+    selection: []
+
 
 
   },
@@ -42,17 +42,17 @@ Page({
       count: e.detail.value
     })
   },
-getTitle: function(e) {
+  getTitle: function(e) {
     this.setData({
       mTitle: e.detail.value
     })
   },
-getFirst: function(e) {
+  getFirst: function(e) {
     this.setData({
       mFirst: e.detail.value
     })
   },
-getSecond: function(e) {
+  getSecond: function(e) {
     this.setData({
       mSecond: e.detail.value
     })
@@ -62,24 +62,24 @@ getSecond: function(e) {
       mThird: e.detail.value
     })
   },
-getFouth: function(e) {
+  getFouth: function(e) {
     this.setData({
       mFouth: e.detail.value
     })
   },
-getAnswer: function(e) {
+  getAnswer: function(e) {
     this.setData({
       mAnswer: e.detail.value
     })
   },
-  add: function(){
+  add: function() {
     this.setData({
       pageKey: 2
     })
   },
 
   onChange(e) {
-    if (this.data.mAnswer === "" || this.data.mThird === "" || this.data.mFouth === "" || this.data.mTitle === "" || this.data.mSecond === "" || this.data.mFirst === ""){
+    if (this.data.mAnswer === "" || this.data.mThird === "" || this.data.mFouth === "" || this.data.mTitle === "" || this.data.mSecond === "" || this.data.mFirst === "") {
       return
     }
     var currentSelection = []
@@ -105,7 +105,7 @@ getAnswer: function(e) {
     console.log(this.data)
   },
 
-  save: function(){
+  save: function() {
     if (this.data.mAnswer === "" || this.data.mThird === "" || this.data.mFouth === "" || this.data.mTitle === "" || this.data.mSecond === "" || this.data.mFirst === "") {
       return
     }
@@ -121,7 +121,8 @@ getAnswer: function(e) {
     wx.request({
       url: app.globalData.url + "/addWork",
       method: "POST",
-      data:{
+      data: {
+        count: this.data.count,
         workName: this.data.workName,
         declaration: this.data.declaration,
         teacherOpenId: this.data.teacherOpenId,
@@ -132,6 +133,9 @@ getAnswer: function(e) {
       },
       success: res => {
         console.log(res)
+        wx.navigateBack({
+
+        })
       }
 
     })
