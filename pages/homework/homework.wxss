@@ -1,16 +1,20 @@
 /* pages/homework/homework.wxss */
 
-.page{
+.page {
   width: 100%;
   height: 100%;
 }
 
-.endBox{
+.endBox {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  
+
   position: fixed;
   width: 100%;
   bottom: 30rpx;
+}
+
+.button {
+  bottom: 150 rpx;
 }

@@ -1,58 +1,23 @@
 <!--pages/course/course.wxml-->
 <view class="page">
-<scroll-view >
-   <wux-wing-blank size="large">
-   <view>完成进度</view>
-   <wux-progress status="progress" show-info strokeWidth="13" percent="50" shape="round"/>
-   <wux-white-space size="large" />
-   <view>学习得分</view>
-   <wux-progress status="progress" show-info percent="70" strokeWidth="13" shape="round"/>
-   <wux-white-space size="large" />
-   </wux-wing-blank>
-    <wux-wing-blank size="default" wx:for="{{work}}">
-      <wux-card title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}"  actions="{{homework}}" bind:action="toHomework">
-        <view slot="body">{{item}}作业与课件</view>
-        <view slot="footer">{{courseMotto[index]}}</view>
+  <scroll-view>
+    <!-- <block wx:if="{{app.globalData.type == 0}}">
+      <wux-wing-blank size="large">
+        <view>完成进度</view>
+        <wux-progress status="progress" show-info strokeWidth="13" percent="50" shape="round" />
+        <wux-white-space size="large" />
+        <view>学习得分</view>
+        <wux-progress status="progress" show-info percent="70" strokeWidth="13" shape="round" />
+        <wux-white-space size="large" />
+      </wux-wing-blank>
+    </block> -->
+    <wux-wing-blank size="default" wx:for="{{workList}}">
+      <wux-card title="{{item.workName}}" thumb="{{courseIcon}}" actions="{{homework}}" extra="{{item.score}}分" bind:action="toHomework" data-studentOpenId="{{item.studentOpenId}}"
+        id="{{idList[index]}}">
+        <view slot="body">作业与课件</view>
+        <view slot="footer">{{item.declaration}}</view>
       </wux-card>
       <wux-white-space size="large" />
     </wux-wing-blank>
   </scroll-view>
-    <!-- </wux-wing-blank>
-    <wux-wing-blank size="default" wx:for="{{work}}">
-      <wux-card title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}"  actions="{{homework}}" bind:action="toHomework">
-        <view slot="body">{{item}}作业与课件</view>
-        <view slot="footer">{{courseMotto[index]}}</view>
-      </wux-card>
-      <wux-white-space size="large" />
-    </wux-wing-blank>
-  </scroll-view>
-  <wux-segmented-control class="segement" values="{{ ['课程视频', '课程作业'] }}" bind:change="onChange" />
-  <scroll-view wx:if="{{current == 0}}">
-    <wux-wing-blank size="default" wx:for="{{course}}">
-      <wux-card  actions="{{video}}" title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}" bind:action="clickCard">
-        <view slot="body">{{courseBody[index]}}</view>
-        <view slot="footer">{{courseMotto[index]}}</view>
-      </wux-card>
-      <wux-white-space size="large" />
-    </wux-wing-blank>
-  </scroll-view>
-
-  <scroll-view wx:if="{{current == 1}}">
-   <wux-wing-blank size="large">
-   <view>完成进度</view>
-   <wux-progress status="progress" show-info strokeWidth="13" percent="50" shape="round"/>
-   <wux-white-space size="large" />
-   <view>学习得分</view>
-   <wux-progress status="progress" show-info percent="70" strokeWidth="13" shape="round"/>
-   <wux-white-space size="large" />
-   
-    </wux-wing-blank>
-    <wux-wing-blank size="default" wx:for="{{work}}">
-      <wux-card title="{{item}}" extra="{{item}}" thumb="{{courseIcon[index]}}"  actions="{{homework}}" bind:action="toHomework">
-        <view slot="body">{{item}}作业与课件</view>
-        <view slot="footer">{{courseMotto[index]}}</view>
-      </wux-card>
-      <wux-white-space size="large" />
-    </wux-wing-blank>
-  </scroll-view> -->
 </view>

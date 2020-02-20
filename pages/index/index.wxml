@@ -7,6 +7,6 @@
         <text>欢迎来到医路随学小程序</text>
     </view>
     <view class="vitem">
-        <button open-type="getUserInfo" bindgetuserinfo="click" type="primary"> 进入 </button>
+        <button bindtap="click" type="primary"> 进入 </button>
     </view>
 </view>

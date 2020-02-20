@@ -41,7 +41,6 @@ App({
                   "openId":res.data 
                 },
                 success: res => {
-                  console.log(res)
                   that.globalData.type = res.data.type
                   that.globalData.name = res.data.name
                 }

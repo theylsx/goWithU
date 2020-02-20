@@ -4,6 +4,7 @@
     "wux-step": "../../dist/step/index",
     "wux-radio-group": "../../dist/radio-group/index",
     "wux-pagination": "../../dist/pagination/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
     "wux-radio": "../../dist/radio/index"
     },
     "navigationBarTitleText": "课后习题"

@@ -1,20 +1,25 @@
 <!--pages/homework/homework.wxml-->
-
 <view class="page">
   <wux-radio-group name="a" title="{{work.title[current-1]}}" bind:change="onChange1" value="{{value1}}">
-    <wux-radio color="positive" title="A. {{work.selection[current-1][0]}}" value="1" disabled="{{disabled}}"/>
-    <wux-radio color="positive" title="B. {{work.selection[current-1][1]}}" value="2" disabled="{{disabled}}"/>
-    <wux-radio color="positive" title="C. {{work.selection[current-1][2]}}" value="3" disabled="{{disabled}}"/>
-    <wux-radio color="positive" title="D. {{work.selection[current-1][3]}}" value="4" disabled="{{disabled}}"/>
+    <wux-radio color="positive" title="A. {{work.selection[current-1][0]}}" value="1" disabled="{{disabled}}" />
+    <wux-radio color="positive" title="B. {{work.selection[current-1][1]}}" value="2" disabled="{{disabled}}" />
+    <wux-radio color="positive" title="C. {{work.selection[current-1][2]}}" value="3" disabled="{{disabled}}" />
+    <wux-radio color="positive" title="D. {{work.selection[current-1][3]}}" value="4" disabled="{{disabled}}" />
   </wux-radio-group>
-
+  <view wx:if="{{disabled == true}}">
+    <wux-wing-blank size="large">
+      <view>正确答案：{{ans[current - 1]}}</view>
+    </wux-wing-blank>
+  </view>
+  <view wx:if="{{(current == work.count) && (disabled == false)}}">
+    <wux-wing-blank size="large">
+      <button type="primary" class="button" bindtap="onClick">提交</button>
+    </wux-wing-blank>
+  </view>
   <view class="endBox">
     <wux-pagination current="{{ current }}" total="{{work.count}}" mode="button" controlled bind:change="onChange">
       <view slot="prev">Prev</view>
       <view slot="next">Next</view>
     </wux-pagination>
-
-
   </view>
-  </view>
-  
+</view>

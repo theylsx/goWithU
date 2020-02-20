@@ -38,8 +38,6 @@ Page({
         console.log(res)
       }
     })
-    console.log(this.data.feedbackList.data.id)
-
   },
 
   /**
