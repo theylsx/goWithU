@@ -3,21 +3,14 @@
     "pages/index/index",
     "pages/login/login",
     "pages/logs/logs",
-    "pages/video/video",
     "pages/user/user",
     "pages/communicate/communicate",
     "pages/course/course",
     "pages/homework/homework",
     "pages/goods/goods",
-    "pages/post/post",
-    "pages/showPost/showPost",
     "pages/upload/upload",
-    "pages/talk/talk",
-    "pages/recruit/recruit",
-    "pages/recruitDetail/recruitDetail",
     "pages/myTeacher/myTeacher",
     "pages/teacherInformation/teacherInformation",
-    "pages/courseResources/courseResources",
     "pages/myStudent/myStudent",
     "pages/studentInformation/studentInformation",
     "pages/addStudent/addStudent",
@@ -27,10 +20,7 @@
     "pages/studentFeedback/studentFeedback",
     "pages/teacherFeedbackList/teacherFeedbackList",
     "pages/studentAppointment/studentAppointment",
-    "pages/talkWithStudent/talkWithStudent",
-    "pages/teacherTalk/teacherTalk",
-    "pages/studentWorkList/studentWorkList",
-    "pages/addWork/addWork"
+    "pages/studentWorkList/studentWorkList"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -42,8 +32,7 @@
     "color": "#cdcdcd",
     "selectedColor": "#515151",
     "borderStyle": "black",
-    "list": [
-      {
+    "list": [{
         "selectedIconPath": "icon/course51.png",
         "iconPath": "icon/coursecd.png",
         "pagePath": "pages/course/course",
