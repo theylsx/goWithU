@@ -20,7 +20,8 @@
     "pages/studentFeedback/studentFeedback",
     "pages/teacherFeedbackList/teacherFeedbackList",
     "pages/studentAppointment/studentAppointment",
-    "pages/studentWorkList/studentWorkList"
+    "pages/studentWorkList/studentWorkList",
+    "pages/registrationForm/registrationForm"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,7 +33,8 @@
     "color": "#cdcdcd",
     "selectedColor": "#515151",
     "borderStyle": "black",
-    "list": [{
+    "list": [
+      {
         "selectedIconPath": "icon/course51.png",
         "iconPath": "icon/coursecd.png",
         "pagePath": "pages/course/course",
