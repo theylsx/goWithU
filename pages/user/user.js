@@ -130,9 +130,15 @@ Page({
     },
 
     signUp: function () {
-        wx.navigateTo({
-            url: ''
-        })
+        if (this.data.type == 0) {
+            wx.navigateTo({
+                url: '../studentRegistrationForm/studentRegistrationForm'
+            })
+        } else {
+            wx.navigateTo({
+                url: '../teacherRegistrationForm/teacherRegistrationForm'
+            })
+        }
     }
 
 })

@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "wux-form": "../../dist/form/index",
+    "wux-field": "../../dist/field/index",
+    "wux-cell-group": "../../dist/cell-group/index",
+    "wux-cell": "../../dist/cell/index",
+    "wux-input": "../../dist/input/index",
+    "wux-radio-group": "../../dist/radio-group/index",
+    "wux-radio": "../../dist/radio/index",
+    "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-button": "../../dist/button/index",
+    "wux-textarea": "../../dist/textarea/index",
+    "wux-toast": "../../dist/toast/index"
+  },
+  "navigationBarTitleText": "学生报名表"
+}

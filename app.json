@@ -21,7 +21,8 @@
     "pages/teacherFeedbackList/teacherFeedbackList",
     "pages/studentAppointment/studentAppointment",
     "pages/studentWorkList/studentWorkList",
-    "pages/registrationForm/registrationForm"
+    "pages/studentRegistrationForm/studentRegistrationForm",
+    "pages/teacherRegistrationForm/teacherRegistrationForm"
   ],
   "window": {
     "backgroundTextStyle": "light",

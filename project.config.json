@@ -68,8 +68,15 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "学生用户界面",
-					"pathName": "pages/user/user",
+					"name": "学生报名表",
+					"pathName": "pages/studentRegistrationForm/studentRegistrationForm",
+					"query": "type=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "志愿者报名表",
+					"pathName": "pages/teacherRegistrationForm/teacherRegistrationForm",
 					"scene": null
 				}
 			]
