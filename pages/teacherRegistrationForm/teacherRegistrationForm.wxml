@@ -1,0 +1,55 @@
+<!--pages/teacherRegistrationForm/teacherRegistrationForm.wxml-->
+<wux-cell-group title="基本信息">
+    <wux-cell>
+        <wux-input label="姓名" bind:change="getName"/>
+    </wux-cell>
+
+    <wux-cell>
+        <wux-input label="联系方式" bind:change="getPhone"/>
+    </wux-cell>
+
+    <wux-cell>
+        <wux-input label="就读学校" bind:change="getSchoolName"/>
+    </wux-cell>
+
+    <wux-cell>
+        <wux-input label="年级" bind:change="getTeacherGrade"/>
+    </wux-cell>
+
+    <wux-cell>
+        <wux-input label="学院" bind:change="getFaculty"/>
+    </wux-cell>
+
+</wux-cell-group>
+
+<wux-radio-group title="性别" value="{{sex}}" bind:change="getSex">
+    <wux-radio title="男" value="male"/>
+    <wux-radio title="女" value="female"/>
+</wux-radio-group>
+
+<wux-cell-group title="教学内容">
+    <wux-cell>
+        <wux-input label="科目" bind:change="getStudentSubject"/>
+    </wux-cell>
+
+    <wux-cell>
+        <wux-input label="年级" bind:change="getStudentGrade"/>
+    </wux-cell>
+</wux-cell-group>
+
+<wux-cell-group title="简介">
+    <wux-cell hover-class="none">
+        <wux-textarea rows="3" bind:change="getIntroduction"/>
+    </wux-cell>
+</wux-cell-group>
+
+<wux-cell-group title="备注">
+    <wux-cell hover-class="none">
+        <wux-textarea rows="3" bind:change="getRemark"/>
+    </wux-cell>
+</wux-cell-group>
+
+<wux-toast id="wux-toast" />
+<wux-wing-blank size="default">
+    <wux-button block type="balanced" bind:click="submit">提交</wux-button>
+</wux-wing-blank>

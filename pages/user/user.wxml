@@ -20,9 +20,11 @@
 
       <block wx:if="{{type == 0}}">
         <wux-cell thumb="/icon/chinese.png" title="我的老师" bindtap="myTeacher"></wux-cell>
+        <wux-cell thumb="/icon/signUp.png" title="学生报名" bindtap="signUp"></wux-cell>
       </block>
       <block wx:else>
         <wux-cell thumb="/icon/chinese.png" title="我的学生" bindtap="myStudent"></wux-cell>
+        <wux-cell thumb="/icon/signUp.png" title="志愿者报名" bindtap="signUp"></wux-cell>
       </block>
 
       <!-- <wux-cell thumb="/icon/math.png" title="学习进度" bindtap="verify"></wux-cell>
