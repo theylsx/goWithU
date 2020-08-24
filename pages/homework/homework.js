@@ -13,13 +13,14 @@ Page({
     work: '',
     answer: [],
     ans: [],
+    type: 1,
     studentOpenId: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.setData({
       id: options.id,
       studentOpenId: options.studentOpenId
@@ -31,6 +32,7 @@ Page({
       })
     }
     var that = this
+    var type = 1;
     wx.request({
       url: app.globalData.url + '/getWork',
       method: 'POST',
@@ -39,98 +41,110 @@ Page({
       },
       success: res => {
         console.log(res.data)
-        that.setData({
-          work: res.data,
-          answer: new Array(res.data.count)
-        })
-        var t = []
-        for (var i = 0; i < (that.data.work.answer.length); i++) {
-          t[i] = that.iToA(that.data.work.answer[i])
-        }
-        that.setData({
-          ans: t
-        })
-
-      }
-    })
-    wx.request({
-      url: app.globalData.url + '/getAnswer',
-      method: 'POST',
-      data: {
-        openId: that.data.studentOpenId,
-        workId: that.data.id
-      },
-      success: res => {
-        console.log(res)
-        if (res.data != "") {
+        if (res.data.type === 1) {
           that.setData({
-            answer: res.data.answer,
-            value1: res.data.answer[0],
-            disabled: true
+            work: res.data,
+          })
+        } else {
+          type = 0;
+          that.setData({
+            work: res.data,
+            answer: new Array(res.data.count),
+            type: 1
+          })
+          var t = []
+          for (var i = 0; i < (that.data.work.answer.length); i++) {
+            t[i] = that.iToA(that.data.work.answer[i])
+          }
+          that.setData({
+            ans: t
           })
         }
-
       }
     })
+    if (!type) {
+      wx.request({
+        url: app.globalData.url + '/getAnswer',
+        method: 'POST',
+        data: {
+          openId: that.data.studentOpenId,
+          workId: that.data.id
+        },
+        success: res => {
+          console.log(res)
+          if (res.data != "") {
+            that.setData({
+              answer: res.data.answer,
+              value1: res.data.answer[0],
+              disabled: true
+            })
+          }
+        }
+      })
+    }
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
 
   },
 
   iToA(str) {
     switch (str) {
-      case "1": return "A";
-      case "2": return "B";
-      case "3": return "C";
-      case "3": return "D";
+      case "1":
+        return "A";
+      case "2":
+        return "B";
+      case "3":
+        return "C";
+      case "3":
+        return "D";
     }
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
 
@@ -144,7 +158,7 @@ Page({
         workId: that.data.id,
         studentOpenId: that.data.studentOpenId
       },
-      success: function (res) {
+      success: function(res) {
         console.log(res)
         wx.navigateBack()
       }
