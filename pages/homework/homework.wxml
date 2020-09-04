@@ -28,6 +28,13 @@
     <view>
       <wux-wing-blank size="large">
         {{work.context}}
+        <wux-upload listType="picture-card" defaultFileList="{{ fileList }}" max="4"
+          url="https://www.skyvow.cn/api/common/file" bind:change="onChangeFile" bind:success="onSuccess"
+          bind:fail="onFail" bind:complete="onComplete" bind:preview="onPreview">
+          <text>Upload</text>
+        </wux-upload>
+        <wux-button block size="default" type="balanced" bind:click="onClickUpload">
+          <wux-icon type="ios-save" size="16" /> balanced</wux-button>
       </wux-wing-blank>
     </view>
   </view>

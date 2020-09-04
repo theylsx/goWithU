@@ -5,7 +5,10 @@
     "wux-radio-group": "../../dist/radio-group/index",
     "wux-pagination": "../../dist/pagination/index",
     "wux-wing-blank": "../../dist/wing-blank/index",
+    "wux-upload": "../../dist/upload/index",
+    "wux-icon": "../../dist/icon/index",
+    "wux-button": "../../dist/button/index",
     "wux-radio": "../../dist/radio/index"
-    },
-    "navigationBarTitleText": "课后习题"
+  },
+  "navigationBarTitleText": "课后习题"
 }
