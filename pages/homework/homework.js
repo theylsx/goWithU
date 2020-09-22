@@ -39,6 +39,7 @@ Page({
         id: that.data.id,
       },
       success: (res) => {
+        console.log(res)
         if (res.data.type === 1) {
           that.setData({
             work: res.data,
@@ -48,7 +49,7 @@ Page({
           that.setData({
             work: res.data,
             answer: new Array(res.data.count),
-            type: 1,
+            type: 0,
           });
           var t = [];
           for (var i = 0; i < that.data.work.answer.length; i++) {
